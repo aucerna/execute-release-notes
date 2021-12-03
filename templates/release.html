@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% macro items(title, items) -%}
+  <div class="card item-detail">
+  <div class="card-header"><b>{{title}}</b></div>
+  <div class="card-body">
+  <ul>
+   {% for item in items | sort(attribute="weight", reverse=True) %}
+   <li class="item">{{item["title"]}}
+   {%for tag in item["tags"] %}
+   <span class="badge bg-secondary">{{tag}}</span>
+   {%endfor%}
+   {% if item["detail_html"] %}
+   <div class="card bg-light">
+   <div class="card-body item-detail-panel">
+   {{ item["detail_html"] | safe }}
+   </div>
+   </div>
+   {% endif %}
+   </li>
+   {% endfor %}
+  </ul>
+  </div>
+  </div>
+{% endmacro -%}
+
+{% block content %}
+    <h1>{{release["title"]}}</h1>
+    <div class="release-summary">
+    {{release["summary_html"] | safe}}
+    </div>
+
+    {{items("Features", release["items"] | selectattr("type","equalto", "feature"))}}
+    {{items("Enhancements", release["items"] | selectattr("type","equalto", "enhancement"))}}
+    {{items("Bugs", release["items"] | selectattr("type","equalto", "bug"))}}
+    {{items("Notes", release["items"] | selectattr("type","equalto", "note"))}}
+
+    {%for type,tmp in release["items"] 
+        | rejectattr("type", "equalto", "bug") 
+        | rejectattr("type", "equalto", "feature") 
+        | rejectattr("type", "equalto", "enhancement") 
+        | rejectattr("type", "equalto", "note") 
+        | groupby('type')%}
+    {{items(type | capitalize, tmp)}}
+    {%endfor%}
+        
+{% endblock %}

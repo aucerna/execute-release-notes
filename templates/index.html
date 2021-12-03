@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Releases</h1>
+    <ul>
+      {% for r in releases | sort(attribute="date") %}
+         <li><a href="{{r.id}}/index.html">{{r.title}}</a> ({{r.date}})</li>
+      {% endfor %}
+    </ul>
+{% endblock %}
