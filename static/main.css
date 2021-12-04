@@ -6,6 +6,15 @@ margin-bottom: 0px;
 margin-bottom: 2em;
 }
 
+ul.detail-list {
+margin-bottom: 0px;
+}
+
 .release-summary {
 margin-bottom: 2em;
+}
+
+li.detail-item {
+    padding-bottom: 5px;
+    padding-top: 5px;
 }

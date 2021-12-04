@@ -1,3 +1,5 @@
 type,tags,title,weight,detail,item#
 feature,integration,Improved integration between hosted Aucerna Execute environments and on-prem systems,,,
 feature,"integration, AFE",Support for Peloton SaaS,,,
+bug,AFE,Something,,,
+note,important,Backup your database. ,,,

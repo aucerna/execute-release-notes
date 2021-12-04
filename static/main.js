@@ -22,7 +22,7 @@ $(function() {
         filter(hash);
     }
 
-    $(window).bind( 'hashchange', function(e) {
+    $(window).bind('hashchange', function(e) {
         var hash = decodeURIComponent(window.location.hash.substr(1));
         $("#searchForm").val(hash);
         filter(hash);
@@ -30,7 +30,7 @@ $(function() {
          
     $("#searchForm").bind("keyup change", function() {
         var searchVal = $(this).val().toLowerCase();
-        window.location.hash = searchVal;
+        window.location.hash = encodeURIComponent(searchVal);
         filter(searchVal);
     });
 

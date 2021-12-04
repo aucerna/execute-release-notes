@@ -1,16 +1,26 @@
 {% extends "base.html" %}
 
+{% macro tag(t) -%}
+   {%if t == "integration" %}
+   <span class="badge rounded-pill bg-primary">#{{t}}</span>
+   {%elif t == "important" %}
+   <span class="badge rounded-pill bg-danger">#{{t}}</span>
+   {%else%}
+   <span class="badge rounded-pill bg-secondary">#{{t}}</span>
+   {%endif%}
+{% endmacro -%}
+
 {% macro items(title, expand, items) -%}
   {% if items  %}
   <div class="card item-detail">
   <div class="card-header"><b>{{title}}</b></div>
   <div class="card-body">
-  <ul>
+  <ul class="detail-list">
    {% for item in items | sort(attribute="weight", reverse=True) %}
    {% if item["detail_html"] %}
-   <li class="item filterable"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
-   {%for tag in item["tags"] %}
-   <span class="badge bg-secondary">{{tag}}</span>
+   <li class="detail-item item filterable"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
+   {%for t in item["tags"] %}
+   {{ tag(t) }}
    {%endfor%}
    <div class="collapse {%if expand%}show{%endif%}" id="collapse_{{item.id}}">
    <div class="card bg-light">
@@ -21,9 +31,9 @@
    </div>
    </li>
    {% else %}
-   <li class="item filterable">{{item["title"]}}
-   {%for tag in item["tags"] %}
-   <span class="badge bg-secondary">{{tag}}</span>
+   <li class="detail-item item filterable">{{item["title"]}}
+   {%for t in item["tags"] %}
+   {{ tag(t) }}
    {%endfor%}
    </li>
    {% endif %}
@@ -41,9 +51,9 @@
     </div>
 
     {{items("💜 Features", true, release["items"] | selectattr("type","equalto", "feature") | list)}}
-    {{items("Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
-    {{items("Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
-    {{items("Notes", false, release["items"] | selectattr("type","equalto", "note") | list)}}
+    {{items("✔️ Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
+    {{items("🐛 Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
+    {{items("📝 Notes", false, release["items"] | selectattr("type","equalto", "note") | list)}}
 
     {%for type,tmp in release["items"] 
         | rejectattr("type", "equalto", "bug") 
