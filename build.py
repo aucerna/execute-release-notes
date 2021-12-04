@@ -71,7 +71,6 @@ for release_id in os.listdir(SOURCE_DIR):
                     else:
                         row[headers[i]] = ln[i]
                 release["items"].append(row)
-    print(release)
     releases.append(release)
 
 env = jinja2.Environment(

@@ -8,7 +8,7 @@
   <ul>
    {% for item in items | sort(attribute="weight", reverse=True) %}
    {% if item["detail_html"] %}
-   <li class="item"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
+   <li class="item filterable"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
    {%for tag in item["tags"] %}
    <span class="badge bg-secondary">{{tag}}</span>
    {%endfor%}
@@ -21,7 +21,7 @@
    </div>
    </li>
    {% else %}
-   <li class="item">{{item["title"]}}
+   <li class="item filterable">{{item["title"]}}
    {%for tag in item["tags"] %}
    <span class="badge bg-secondary">{{tag}}</span>
    {%endfor%}
