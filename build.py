@@ -57,7 +57,7 @@ for release_id in os.listdir(SOURCE_DIR):
                         if ln[i] != '':
                             row[headers[i]] = int(ln[i])
                     elif headers[i] == 'tags':
-                        row[headers[i]] = [c.strip() for c in ln[i].split(',')]
+                        row[headers[i]] = filter(lambda x: x, [c.strip() for c in ln[i].split(',')])
                     elif headers[i] == 'detail' and ln[i]:
                         detail_path = os.path.join(release_path, ln[i])
                         detail_file = os.path.join(detail_path, 'summary.md')
@@ -70,7 +70,8 @@ for release_id in os.listdir(SOURCE_DIR):
                             row[k] = detail[k]
                     else:
                         row[headers[i]] = ln[i]
-                release["items"].append(row)
+                if row["title"]:
+                    release["items"].append(row)
     releases.append(release)
 
 env = jinja2.Environment(

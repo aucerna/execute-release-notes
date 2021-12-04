@@ -1,7 +1,3 @@
-This is a new thing!
+Grids throughout Aucerna Execute have been replaced by a new component that behaves much more like Excel.
 
-<p class="alert alert-danger">
-  Hello
-</p>
-
-![](pic.jpg)
+![](excel.jpeg)

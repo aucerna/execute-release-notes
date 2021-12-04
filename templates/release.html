@@ -4,7 +4,9 @@
    {%if t == "integration" %}
    <span class="badge rounded-pill bg-primary">#{{t}}</span>
    {%elif t == "important" %}
-   <span class="badge rounded-pill bg-danger">#{{t}}</span>
+   <span class="badge rounded-pill text-dark bg-danger">#{{t}}</span>
+   {%elif t == "security" %}
+   <span class="badge rounded-pill bg-warning">#{{t}}</span>
    {%else%}
    <span class="badge rounded-pill bg-secondary">#{{t}}</span>
    {%endif%}
