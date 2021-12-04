@@ -1,0 +1,11 @@
+.item-detail-panel > p:last-of-type {
+margin-bottom: 0px;
+}
+
+.item-detail {
+margin-bottom: 2em;
+}
+
+.release-summary {
+margin-bottom: 2em;
+}

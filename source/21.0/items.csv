@@ -1,5 +1,3 @@
-type,tags,description,detail,item#
-bug,"duck,cat",Hello World,,10
-feature,"duck",Hello World 2,excel,10
-note,"duck",Hello World 2,excel,10
-note,,Moof,moof,
+type,tags,title,weight,detail,item#
+feature,integration,Improved integration between hosted Aucerna Execute environments and on-prem systems,,,
+feature,"integration, AFE",Support for Peloton SaaS,,,

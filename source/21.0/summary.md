@@ -1,11 +1,7 @@
 ---
 title: Aucerna Execute 21.0
-date: 2021-12-03
+date: 2021-12-15
 ---
 
-An **awesome** release.
+Aucerna Execute 21.0 summary goes here
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |

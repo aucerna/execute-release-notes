@@ -1,27 +1,37 @@
 {% extends "base.html" %}
 
-{% macro items(title, items) -%}
+{% macro items(title, expand, items) -%}
+  {% if items  %}
   <div class="card item-detail">
   <div class="card-header"><b>{{title}}</b></div>
   <div class="card-body">
   <ul>
    {% for item in items | sort(attribute="weight", reverse=True) %}
-   <li class="item">{{item["title"]}}
+   {% if item["detail_html"] %}
+   <li class="item"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
    {%for tag in item["tags"] %}
    <span class="badge bg-secondary">{{tag}}</span>
    {%endfor%}
-   {% if item["detail_html"] %}
+   <div class="collapse {%if expand%}show{%endif%}" id="collapse_{{item.id}}">
    <div class="card bg-light">
    <div class="card-body item-detail-panel">
    {{ item["detail_html"] | safe }}
    </div>
    </div>
-   {% endif %}
+   </div>
    </li>
+   {% else %}
+   <li class="item">{{item["title"]}}
+   {%for tag in item["tags"] %}
+   <span class="badge bg-secondary">{{tag}}</span>
+   {%endfor%}
+   </li>
+   {% endif %}
    {% endfor %}
   </ul>
   </div>
   </div>
+  {% endif %}
 {% endmacro -%}
 
 {% block content %}
@@ -30,10 +40,10 @@
     {{release["summary_html"] | safe}}
     </div>
 
-    {{items("Features", release["items"] | selectattr("type","equalto", "feature"))}}
-    {{items("Enhancements", release["items"] | selectattr("type","equalto", "enhancement"))}}
-    {{items("Bugs", release["items"] | selectattr("type","equalto", "bug"))}}
-    {{items("Notes", release["items"] | selectattr("type","equalto", "note"))}}
+    {{items("💜 Features", true, release["items"] | selectattr("type","equalto", "feature") | list)}}
+    {{items("Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
+    {{items("Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
+    {{items("Notes", false, release["items"] | selectattr("type","equalto", "note") | list)}}
 
     {%for type,tmp in release["items"] 
         | rejectattr("type", "equalto", "bug") 
@@ -41,7 +51,7 @@
         | rejectattr("type", "equalto", "enhancement") 
         | rejectattr("type", "equalto", "note") 
         | groupby('type')%}
-    {{items(type | capitalize, tmp)}}
+    {{items(type | capitalize, false, tmp)}}
     {%endfor%}
         
 {% endblock %}
