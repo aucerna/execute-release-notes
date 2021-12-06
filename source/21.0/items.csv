@@ -1,7 +1,7 @@
 type,tags,title,weight,detail,item#
 bug,AFE,Fixed issue where the AFE Status Widget (on the dashboard) would show incorrect results for Revised or Supplemented AFEs.,,,61091
 bug,workflow,Resolved issues where slashes in text sections within a Task would cause an error.,,,147716
-enhancement,,New color-scheme with Quorum branding.,,,127725
+enhancement,,New color-scheme with Quorum branding.,,theme,127725
 enhancement,security,Many 3rd party components updated to latest versions.,,components,
 enhancement,"admin,workflow",Added support for Workflow Tasks to the User Reassign Wizard.,,,
 enhancement,admin,Added support for Project Activity Owners to the User Reassign Wizard.,,,
