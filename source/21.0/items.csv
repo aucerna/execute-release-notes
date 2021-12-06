@@ -1,17 +1,28 @@
 type,tags,title,weight,detail,item#
 feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,,,
 feature,"integration, AFE",Support for integration with hosted Peloton (SaaS / Allez).,,,
-note,,Minor Adjustment to version numbering.  Execute 21 instead of Execute 2021.,,,
-enhancement,,New color-scheme with Quorum branding.,,,
-feature,,Grid overhaul throughout the system.  More Excel-like.,,excel,
+note,,"Aucerna Execute 2021 is now known as ""Aucerna Execute 21"".",,,
+enhancement,,New color-scheme with Quorum branding.,,,127725
+feature,usability,Grid overhaul throughout the system.  More Excel-like.,,excel,
 feature,"integration, saas",Support for Single-signon and MFA for hosted environments through Okta.,,,
-feature,"integration, AFE",Integration with WellEz.,,,
+feature,"integration, AFE",Integration with Quorum's WellEz.,,,
 feature,opsched,New tool to simplify changing schedule view configurations.,,,
-feature,AFE,New workflow to simplify releasing funds from an AFE.,,,
-enhancement,security,Many 3rd party components updated to latest versions.,,,
+feature,AFE,New workflow to simplify releasing funds from an AFE.,,,136463
+enhancement,security,Many 3rd party components updated to latest versions.,,components,
 note,,Removed functionality for now-defunct AFE Link.,,,
-enhancement,admin,User Reassign Wizard support for Workflow Tasks.,,,
-enhancement,admin,User Reassign Wizard support for Project Activity Owners.,,,
+enhancement,admin,Added support for Workflow Tasks to the User Reassign Wizard.,,,
+enhancement,admin,Added support for Project Activity Owners to the User Reassign Wizard.,,,
 enhancement,admin,New custom business rules to allow an administrator to configure when Revisions and Supplements may be made.,,,
 enhancement,capital,Improved reporting on Capital Project snapshots.,,,
 enhancement,capital,New tool to simplify bulk updating Capital Project forecasts.,,,
+enhancement,capital,"Button added on Capital tab, and reforecasting screen, to quickly update capital summary to match monthly capital.",,,54370
+enhancement,capital,Button to update Capital Summary to Total(Monthly Capital),,,54370
+bug,AFE,Fixed issue where the AFE Status Widget (on the dashboard) would show incorrect results for Revised or Supplemented AFEs.,,,61091
+enhancement,opsched,Added the ability to have additional information show in the activity pop-up on the schedule,,,98342
+enhancement,"AFE,accruals","Administrators (with ""AFE Owner Actions"") can now delegate Field Cost entry on behalf of another user.",,,135784
+enhancement,AFE,"Added a new ""EstimateForAccountGroup"" formula function to the formula editor to allow users to pull out specifics parts of an AFE estimate.",,,136343
+,,"Global Report Calculated Columns no access to DOC TYPE 2020,2021, e.g. AFE Estimate functions",,,141005
+enhancement,"AFE,accruals",The Field Cost Entry and Field Cost Cutoff Date settings are now editable by an Accruals Admin.,,,144621
+bug,workflow,Resolved issues where slashes text sections within a task would cause an error.,,,147716
+enhancement,,The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
+note,,To help guide future development we've implemented usage telemetry using Pendo.,,,

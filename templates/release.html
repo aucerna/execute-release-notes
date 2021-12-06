@@ -52,7 +52,7 @@
     {{release["summary_html"] | safe}}
     </div>
 
-    {{items("💜 Features", true, release["items"] | selectattr("type","equalto", "feature") | list)}}
+    {{items("💜 Features", false, release["items"] | selectattr("type","equalto", "feature") | list)}}
     {{items("✔️ Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
     {{items("🐛 Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
     {{items("📝 Notes", false, release["items"] | selectattr("type","equalto", "note") | list)}}
