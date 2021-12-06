@@ -14,14 +14,14 @@ enhancement,opsched,Added the ability to have additional information show in the
 enhancement,"AFE,accruals","Administrators (with ""AFE Owner Actions"") can now delegate Field Cost entry on behalf of another user.",,,135784
 enhancement,AFE,"Added a new ""EstimateForAccountGroup"" formula function to the formula editor to allow users to pull out specifics parts of an AFE estimate.",,,136343
 enhancement,"AFE,accruals",The Field Cost Entry and Field Cost Cutoff Date settings are now editable by an Accruals Admin.,,,144621
-enhancement,,The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
-feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,,,
+enhancement,usability,The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
+feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,100,,
 feature,"integration, AFE",Support for integration with hosted Peloton (SaaS / Allez).,,,
 feature,usability,Grid overhaul throughout the system.  More Excel-like.,,excel,
 feature,"integration, saas",Support for Single-signon and MFA for hosted environments through Okta.,,,
-feature,"integration, AFE",Integration with Quorum's WellEz.,,,
+feature,"integration, AFE",Integration with Quorum's WellEz.,90,,
 feature,opsched,New tool to simplify changing schedule view configurations.,,,
 feature,AFE,New workflow to simplify releasing funds from an AFE.,,,136463
 note,,"Aucerna Execute 2021 is now known as ""Aucerna Execute 21"".",,,
-note,,Removed functionality for now-defunct AFE Link.,,afelink,
+note,AFE,Removed functionality for now-defunct AFE Link.,,afelink,
 note,,To help guide future development we've implemented usage telemetry using Pendo.,,pendo,
