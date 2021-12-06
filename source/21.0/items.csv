@@ -1,24 +1,23 @@
 type,tags,title,weight,detail,item#
 bug,AFE,Fixed issue where the AFE Status Widget (on the dashboard) would show incorrect results for Revised or Supplemented AFEs.,,,61091
-bug,workflow,Resolved issues where slashes text sections within a task would cause an error.,,,147716
+bug,workflow,Resolved issues where slashes in text sections within a Task would cause an error.,,,147716
 enhancement,,New color-scheme with Quorum branding.,,,127725
 enhancement,security,Many 3rd party components updated to latest versions.,,components,
-enhancement,admin,Added support for Workflow Tasks to the User Reassign Wizard.,,,
+enhancement,"admin,workflow",Added support for Workflow Tasks to the User Reassign Wizard.,,,
 enhancement,admin,Added support for Project Activity Owners to the User Reassign Wizard.,,,
-enhancement,admin,New custom business rules to allow an administrator to configure when Revisions and Supplements may be made.,,,
+enhancement,"admin, AFE",New custom business rules to allow an administrator to configure when Revisions and Supplements may be made.,,,
 enhancement,capital,Improved reporting on Capital Project snapshots.,,,
 enhancement,capital,New tool to simplify bulk updating Capital Project forecasts.,,,
 enhancement,capital,"Button added on Capital tab, and reforecasting screen, to quickly update capital summary to match monthly capital.",,,54370
-enhancement,capital,Button to update Capital Summary to Total(Monthly Capital),,,54370
 enhancement,opsched,Added the ability to have additional information show in the activity pop-up on the schedule,,,98342
 enhancement,"AFE,accruals","Administrators (with ""AFE Owner Actions"") can now delegate Field Cost entry on behalf of another user.",,,135784
 enhancement,AFE,"Added a new ""EstimateForAccountGroup"" formula function to the formula editor to allow users to pull out specifics parts of an AFE estimate.",,,136343
 enhancement,"AFE,accruals",The Field Cost Entry and Field Cost Cutoff Date settings are now editable by an Accruals Admin.,,,144621
-enhancement,usability,The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
+enhancement,"usability,workflow",The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
 feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,100,,
 feature,"integration, AFE",Support for integration with hosted Peloton (SaaS / Allez).,,,
 feature,usability,Grid overhaul throughout the system.  More Excel-like.,,excel,
-feature,"integration, saas",Support for Single-signon and MFA for hosted environments through Okta.,,,
+feature,"integration, saas",Support for Single-signon and MFA for Quorum hosted Aucerna Execute environments through Okta.,,,
 feature,"integration, AFE",Integration with Quorum's WellEz.,90,,
 feature,opsched,New tool to simplify changing schedule view configurations.,,,
 feature,AFE,New workflow to simplify releasing funds from an AFE.,,,136463
