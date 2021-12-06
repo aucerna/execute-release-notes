@@ -1,8 +1,9 @@
-## Huge Grid Improvements
-
 Grids throughout Aucerna Execute have been replaced by a new component that behaves much more like Excel.
 
-Not only do the grids now look more modern and perform better, but they also make visualizing large data sets easy with improved scrolling (no pagination), and the **ability to freeze row and column headings** (something we have been asked for a lot)!
+* Grids look and feel much more modern.
+* Performance for very large grids (many columns or many rows) is substantially faster
+* No more pagination.  Scroll through large grids with ease.
+* After many requests, we not have support for frozen rows and column headers to make it much easier to work on large grids.
 
 Here is an example from the Capital Budgeting screens:
 

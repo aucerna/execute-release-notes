@@ -1,5 +1,9 @@
-.item-detail-panel > p:last-of-type {
+.item-detail-panel > :last-child {
 margin-bottom: 0px;
+}
+
+.item-detail-panel ul {
+    margin-bottom: 1em;
 }
 
 .item-detail {
