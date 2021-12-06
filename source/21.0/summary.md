@@ -1,6 +1,6 @@
 ---
 title: Aucerna Execute 21.0
-date: 2021-12-
+date: 2021-12-15
 ---
 
 Aucerna Execute 21.0 follows the Aucerna Execute 2020 release with a focus on cloud functionality, improved integrations, and usability improvements.
