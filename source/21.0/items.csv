@@ -14,13 +14,13 @@ enhancement,"AFE,accruals","Administrators (with ""AFE Owner Actions"") can now 
 enhancement,AFE,"Added a new ""EstimateForAccountGroup"" formula function to the formula editor to allow users to pull out specifics parts of an AFE estimate.",,,136343
 enhancement,"AFE,accruals",The Field Cost Entry and Field Cost Cutoff Date settings are now editable by an Accruals Admin.,,,144621
 enhancement,"usability,workflow",The Browse screen now color codes more status fields (i.e. task statuses).,,,147722
-feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,100,,
-feature,"integration, AFE",Support for integration with hosted Peloton (SaaS / Allez).,,,
+feature,"integration, saas",Improved integration between hosted Aucerna Execute environments and on-prem systems.,100,agent,
+feature,"integration, AFE",Support for integration with hosted Peloton (SaaS / Allez).,,peloton,
 feature,usability,Grid overhaul throughout the system.  More Excel-like.,,excel,
-feature,"integration, saas",Support for Single-signon and MFA for Quorum hosted Aucerna Execute environments through Okta.,,,
-feature,"integration, AFE",Integration with Quorum's WellEz.,90,,
-feature,opsched,New tool to simplify changing schedule view configurations.,,,
-feature,AFE,New workflow to simplify releasing funds from an AFE.,,,136463
+feature,"integration, saas",Support for Single-signon and MFA for Quorum hosted Aucerna Execute environments through Okta.,,okta,
+feature,"integration, AFE",Integration with Quorum's WellEz.,90,wellez,
+feature,opsched,New tool to simplify changing schedule view configurations.,,schedule_views,
+feature,AFE,New workflow to simplify releasing funds from an AFE.,,release_funds,136463
 note,,"Aucerna Execute 2021 is now known as ""Aucerna Execute 21"".",,,
 note,AFE,Removed functionality for now-defunct AFE Link.,,afelink,
 note,,To help guide future development we've implemented usage telemetry using Pendo.,,pendo,
