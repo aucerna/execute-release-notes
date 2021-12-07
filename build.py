@@ -14,7 +14,7 @@ STATIC_DIR = "static"
 SOURCE_DIR = "source"
 TEMPLATE_DIR = "templates"
 
-extensions = ['admonition', 'tables']
+extensions = ['tables', 'admonition']
 
 # clear output folder
 if os.path.exists(OUTPUT_DIR):
@@ -65,7 +65,7 @@ for release_id in os.listdir(SOURCE_DIR):
                             detail = frontmatter.loads(file.read())
                         content = detail.content
                         content = re.sub(r"!\[(.*?)]\((.*?)\)",f"<a href=\"{ln[i]}/\\2\"><img  alt=\"\\1\" class=\"img-fluid\" src=\"{ln[i]}/\\2\" alt=\"\\1\" /></a>", content)
-                        row["detail_html"] = markdown.markdown(content, extension=extensions)
+                        row["detail_html"] = markdown.markdown(content, extensions=extensions)
                         for k in detail.keys():
                             row[k] = detail[k]
                     else:

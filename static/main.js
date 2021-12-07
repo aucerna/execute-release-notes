@@ -34,4 +34,5 @@ $(function() {
         filter(searchVal);
     });
 
+    $(".item-detail-panel > table").addClass("table table-bordered");
 });
