@@ -21,6 +21,6 @@ feature,"integration, saas",Support for Single-signon and MFA for Quorum hosted 
 feature,"integration, AFE",Integration with Quorum's WellEz.,90,wellez,
 feature,opsched,New tool to simplify changing schedule view configurations.,,schedule_views,
 feature,AFE,New workflow to simplify releasing funds from an AFE.,,release_funds,136463
-note,,"Aucerna Execute 2021 is now known as ""Aucerna Execute 21"".",,,
+note,,"Aucerna Execute 2021 is now known as ""Aucerna Execute 21"" with a new update process.",,updates,
 note,AFE,Removed functionality for now-defunct AFE Link.,,afelink,
 note,,To help guide future development we've implemented usage telemetry using Pendo.,,pendo,
