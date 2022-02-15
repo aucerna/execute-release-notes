@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+bug,afe,Fixed issue where AFE data loader would fail when importing more than nine revisions or supplements on a single AFE.,,,152425
+enhancement,capital,Huge performance improvement on the Project's AFEs tab.,,,154511
+enhancement,afe,Added user's description to the Review and Approval status tabs in ,,,155467
+bug,,Fixed crash when using the AddDays function to add negative days to a date.,,,155305
