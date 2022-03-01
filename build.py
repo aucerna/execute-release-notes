@@ -107,7 +107,8 @@ for release in releases:
             for f in os.listdir(full_detail_folder):
                 if f not in ["summary.md"]:
                     source_file = os.path.join(full_detail_folder, f)
-                    os.makedirs(os.path.join(OUTPUT_DIR, release["id"], detail_folder))
+                    if not os.path.exists(os.path.join(OUTPUT_DIR, release["id"], detail_folder)):
+                        os.makedirs(os.path.join(OUTPUT_DIR, release["id"], detail_folder))
                     shutil.copyfile(source_file, os.path.join(OUTPUT_DIR, release["id"], detail_folder, f))
 
 # copy static content

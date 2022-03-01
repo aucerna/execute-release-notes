@@ -1,0 +1,10 @@
+type,tags,title,weight,detail,item#
+enhancement,afe,"Added ""User Groups"" to the User's Permissions tab to make it easier to manage user permissions for admins.",,,156148
+enhancement,afe,"Administrators can now copy ""classic"" approval rules, system review rules, and create rights.",,,156228
+enhancement,system,Administrators can now see idle time for users in the session manager.,,,156187
+bug,workflow,Fixed concurrency issues in pop-up task form that occassionally caused changes to be lost.,,,156372
+enhancement,workflow,Workflow visualization enhancements,,workflow,156371
+enhancement,system,Administrators will now see if a user is active in a role on the User's Permissions tab,,,127682
+enhancement,system,New Formula Functions for Document Links and Custom Tables.,,formulas,156553
+bug,system,Filtering by Document ID now works again on the Browse screen,,,154747
+enhancement,system,"Entering a month & day (i.e. ""Jul 7"") in a date field now defaults to the current year instead of 2001.",,,156183
