@@ -1,0 +1,7 @@
+type,tags,title,weight,detail,item#
+enhancement,afe,Added new formula functions to make it easy to extract part of an AFE's estimate in a report.,,formulas,157107
+bug,system,Fixed issue where About page and Dashboard wouldn't show available updates of Execute 21.,,,
+bug,system,Search for a DocumentID in the browse page now works.,,,155636
+enhancement,afe,"Multiple Enhancements to integration with WellEz, and import of field estimates.",,,154540
+enhancement,system,"Authorized users are now able to create Document Links between all ""Primary"" document types.",,,157309
+enhancement,workflow,"New functionality to allow a User to ""Take Ownership"" of a task if the share a User Group with the task's owner.",,take,157112
