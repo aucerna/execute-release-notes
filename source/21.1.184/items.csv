@@ -1,0 +1,8 @@
+type,tags,title,weight,detail,item#
+enhancement,system,Added automatic document links between AFE and linked Project(s). ,,,159569
+bug,budget,Resolve issue where Capital Project links created on a Revision/Supplement would be lost when removing that Revision or Supplement. ,,,159873
+bug,system,"Fixed issue where duplicating a ""Field=null"" block in Blockly would create a broken block. ",,,160899
+enhancement,system,"On system startup, Execute will automatically create/fix automated document links such as those between Wells and Site, Job and parent Site, Job and parent Well, AFE and parent Job, AFE and linked Project. ",,,161041
+enhancement,well delivery,"Now that we're firmly into spring, we've added the ability to do some spring cleaning within Execute by enabling the deletion of Wells, Sites and Workflows Definitions. ",,,161128
+enhancement,system,"When deleting a document, manual links are automatically removed to limit cases where a document links to a deleted document.  System links are automatically removed where it makes sense. ",,,161130
+enhancement,afe,Added a new configuration setting (Automatic Adhoc Reviewer Fields) that allows automatically adding mandatory ad hoc reviewers to an AFE based on fields on the AFE (potentially copied from Job Team members). ,,,161542

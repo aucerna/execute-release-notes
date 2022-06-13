@@ -51,7 +51,7 @@
     <div class="release-summary">
     {{release["summary_html"] | safe}}
     </div>
-
+	
     {{items("💜 Features", false, release["items"] | selectattr("type","equalto", "feature") | list)}}
     {{items("✔️ Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
     {{items("🐛 Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
@@ -65,5 +65,7 @@
         | groupby('type')%}
     {{items(type | capitalize, false, tmp)}}
     {%endfor%}
+
+	<div class="alert alert-primary"><b>Ready to update?</b> For Quorum hosted Aucerna Execute environments, email a request to Execute Support.  For on-prem instances of Execute, the installers can be download from <a href="https://clients.aucerna.com/">the Client Portal</a>.</div>
         
 {% endblock %}
