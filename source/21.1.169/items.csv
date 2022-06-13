@@ -1,0 +1,16 @@
+type,tags,title,weight,detail,item#
+bug,budget,Resolved minor issue where entering more than 2 decimal places on project capital would cause a mismatch between total capital and monthly capital. ,,,143427
+bug,system,"Fixed issue where a user's name and timezone would both be labeled as ""Name"" in the various configuration screens, making it difficult to know which was which. ",,,155460
+bug,budget,"Fixed permissions on ""Update Actuals Closed Date"" to require only an admin with ""Accruals Admin"" privilege. ",,,155660
+bug,workflow,Including the same subworkflow multiple times in a workflow is now correctly supported. ,,,156689
+enhancement,integration,"Added support for event-based file exports to the Integration Agent. This makes it possible to use Bolo, Excalibur and other integrations from a Quorum hosted instance of Execute. ",,,156869
+enhancement,integration,Support for Enterprise Events in integration agent. ,,,158011
+bug,system,Fixed issue where starting Execute 21 against a Execute 2020 database would automatically add some Execute 21 fields before failing the version check.  ,,,159714
+bug,integration,Fixed issue where Integration Agent connection would fail if the connection name included mixed case. ,,,160093
+bug,integration,Resolve issue where AFEs that were already exported to QByte/enVision would incorrectly show up in the list of AFEs to export when using the Integration Agent. ,,,160154
+bug,budget,"Resolved issue where Projects would sometimes incorrectly stay in ""Due for Forecast"" filter even after their forecast was updated. ",,,160160
+bug,budget,Resolved issue where the total row could disappear while editing Project forecasts. ,,,160408
+bug,integration,Leading and trailing spaces are now trimmed from VARCHAR fields on Document Synchronization. ,,,160604
+bug,integration,Moved Peloton Subscription Key out of configuration file and built it into the application. ,,,160678
+bug,afe,Huge improvements to the performance of the legacy Create Rights screens for clients with complex rules and many AFE attributes. ,,,160691
+enhancement,integration,Support for AFEStoredProcedureValidator in the Integration Agent. ,,,161030
