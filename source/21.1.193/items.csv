@@ -1,0 +1,6 @@
+type,tags,title,weight,detail,item#
+enhancement,security,Migrating document headers from Angular to React as part of an initiative to remove an out-of-date component. ,,,160897
+bug,system,Fixed issue where report on Last Modified User would fail on some documents (FIELD_INFO) where historical data didn't exist. ,,,162082
+enhancement,afe,"Adding new supplement reporting columns for""AFE - Line-item"" and ""AFE - Line-item by Date"" report types. ",,supplements,162524
+bug,budget,Fixed issue where deleted Projects would incorrectly get included in future snapshots. ,,,162598
+bug,afe,Fixed critical issue where editing an AFE would replace the Operator with the AFE's Parent Company. ,,operator,164446
