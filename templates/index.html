@@ -3,7 +3,12 @@
     <h1>Releases</h1>
     <ul>
       {% for r in releases | sort(attribute="date", reverse=True) %}
-         <li class="filterable"><a href="{{r.id}}/index.html">{{r.title}}</a> ({{r.date}})</li>
+         <li class="filterable"><a href="{{r.id}}/index.html">{{r.title}}</a> ({{r.date}})
+         {% if r.hasSchema %}
+         <span class="badge bg-danger">Schema Changes</span>
+         {% endif %}
+
+         </li>
       {% endfor %}
     </ul>
 {% endblock %}

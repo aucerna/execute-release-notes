@@ -12,5 +12,11 @@ enhancement,admin,"Modified the ""New Field"" dialog to be full width to make ed
 bug,workflow,Fixed issue where a user viewing a task via. the Group Task widget would be unable to take and complete the task. ,,,165284
 bug,"afe,saas",Resolved issue that prevent integration with enVision via. the Integration Agent (for hosted Execute environments). ,,,165296
 bug,afe,Fixed minor error where deleting an AFE wouldn't automatically clean up document links to that AFE. ,,,165514
-note,,.NET 6,,dotnet,
-schema,,Assorted changes,,schema1,
+note,,Upgraded Execute from .NET Core 3.1 to .NET 6,,dotnet,
+note,,Automated Schema Migrations,,schema,
+schema,,Modifed DATABSE_VERSION table (we now track database versions differently),,,
+schema,,Added WELL_NUMBER column to WELL table (for automatically generated Well identifier),,,
+schema,,Added SITE_NUMBER column to SITE table (for automatically generate Site identifier),,,
+schema,,Added WELL_DOC field to AFE_WELL table (for referencing linked Well),,,
+schema,,Multiple new columns and records in FIELD_MAPPING (used internally to copy data from one document to another),,,
+schema,,Added SYSTEM_LINK field to DOCUMENT_LINK table to identify system managed document links,,,

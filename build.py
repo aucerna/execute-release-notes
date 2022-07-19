@@ -41,6 +41,7 @@ for release_id in os.listdir(SOURCE_DIR):
 
     release["summary_html"] = markdown.markdown(summary.content, extensions=extensions)
     release["items"] = []
+    release["hasSchema"] = False
 
     if os.path.exists(items_file):
         print(items_file)
@@ -73,6 +74,9 @@ for release_id in os.listdir(SOURCE_DIR):
                         row[headers[i]] = ln[i]
                 if row["title"]:
                     release["items"].append(row)
+    for item in release["items"]:
+        if item["type"] == 'schema':
+            release["hasSchema"] = True
     releases.append(release)
 
 env = jinja2.Environment(
