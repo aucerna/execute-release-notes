@@ -17,6 +17,7 @@ steps:
 - name: Upload 
   image: alpine
   commands:
+  - apk add openssh
   - eval `ssh-agent -s`
   - echo "$SSH_KEY" | ssh-add -
   - mkdir -p ~/.ssh
