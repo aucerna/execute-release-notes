@@ -43,7 +43,8 @@ for release_id in os.listdir(SOURCE_DIR):
     release["items"] = []
 
     if os.path.exists(items_file):
-        with open(items_file,'r') as f:
+        print(items_file)
+        with open(items_file,'r', encoding='latin-1') as f:
             headers = f.readline().strip().split(',')
             rdr = csv.reader(f)
             for ln in rdr:
