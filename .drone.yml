@@ -18,6 +18,7 @@ steps:
   image: alpine
   commands:
   - apk add openssh
+  - apk add rsync
   - eval `ssh-agent -s`
   - echo "$SSH_KEY" | ssh-add -
   - mkdir -p ~/.ssh
