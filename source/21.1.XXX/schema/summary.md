@@ -1,4 +1,4 @@
-Execute now will automatically update its schema when launching Execute against any older Execute 21 database.  
+Execute will now automatically update its database schema when launching the Execute service against any existing Execute 21 database.
 
 * Because this is an upgrade in place it is imperative that a database backup be taken before upgrading Execute.  While we do our best to test changes, we occassionally encounter configuration we didn't expect.
 * The release notes for each version of Execute will now explicitly detail any schema changes included in that update.
