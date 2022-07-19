@@ -14,7 +14,7 @@ bug,"afe,saas",Resolved issue that prevent integration with enVision via. the In
 bug,afe,Fixed minor error where deleting an AFE wouldn't automatically clean up document links to that AFE. ,,,165514
 note,,Upgraded Execute from .NET Core 3.1 to .NET 6,,dotnet,
 note,,Automated Schema Migrations,,schema,
-schema,,Modifed DATABSE_VERSION table (we now track database versions differently),,,
+schema,,Modifed DATABASE_VERSION table (we now track database versions differently),,,
 schema,,Added WELL_NUMBER column to WELL table (for automatically generated Well identifier),,,
 schema,,Added SITE_NUMBER column to SITE table (for automatically generated Site identifier),,,
 schema,,Added WELL_DOC field to AFE_WELL table (for referencing linked Well),,,

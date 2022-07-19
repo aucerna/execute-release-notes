@@ -53,7 +53,7 @@
 
     {% if release["items"] | selectattr("type","equalto","schema") |list | length > 0 %}
     <div class="alert alert-danger">
-    This update includes schema changes.  It is extremely important that a database backup be taken prior to upgrading to this version of Execute.
+    This update includes schema changes.  It is extremely important that a database backup be taken prior to upgrading to this version of Execute.  A failure or interruption during the schema upgrade process may leave the database in an unusable state. 
     </div>
     {% endif %}
 
