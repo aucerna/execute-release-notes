@@ -1,0 +1,32 @@
+---
+kind: pipeline
+type: docker
+name: default
+trigger:
+  branch:
+    - master
+
+steps:
+
+- name: Build
+  image: python:alpine
+  commands:
+  - pip install -r requirements.txt
+  - python build.py
+
+- name: Upload 
+  image: alpine
+  commands:
+  - eval `ssh-agent -s`
+  - echo "$SSH_KEY" | ssh-add -
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - rsync -rv -e "ssh -p 22" public/ $SSH_USER@$SSH_HOST:notes --checksum
+  environment:
+    SSH_KEY:
+      from_secret: SSH_KEY
+    SSH_USER:
+      from_secret: SSH_USER
+    SSH_HOST:
+      from_secret: SSH_HOST
+      

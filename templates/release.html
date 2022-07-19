@@ -5,6 +5,8 @@
    <span class="badge rounded-pill bg-primary">#{{t}}</span>
    {%elif t == "important" %}
    <span class="badge rounded-pill text-dark bg-danger">#{{t}}</span>
+   {%elif t == "saas" %}
+   <span class="badge rounded-pill text-dark bg-info">#{{t}}</span>
    {%elif t == "security" %}
    <span class="badge rounded-pill bg-warning">#{{t}}</span>
    {%else%}
@@ -12,10 +14,10 @@
    {%endif%}
 {% endmacro -%}
 
-{% macro items(title, expand, items) -%}
+{% macro items(title, headerColor, expand, items) -%}
   {% if items  %}
   <div class="card item-detail">
-  <div class="card-header"><b>{{title}}</b></div>
+  <div class="card-header {{headerColor}}"><b>{{title}}</b></div>
   <div class="card-body">
   <ul class="detail-list">
    {% for item in items | sort(attribute="weight", reverse=True) %}
@@ -52,18 +54,20 @@
     {{release["summary_html"] | safe}}
     </div>
 	
-    {{items("💜 Features", false, release["items"] | selectattr("type","equalto", "feature") | list)}}
-    {{items("✔️ Enhancements", false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
-    {{items("🐛 Bugs", false, release["items"] | selectattr("type","equalto", "bug") | list)}}
-    {{items("📝 Notes", false, release["items"] | selectattr("type","equalto", "note") | list)}}
+    {{items("📝 Notes", "bg-info", true, release["items"] | selectattr("type","equalto", "note") | list)}}
+    {{items("💾 Schema", "bg-warning", false, release["items"] | selectattr("type","equalto", "schema") | list)}}
+    {{items("💜 Features", nil, false, release["items"] | selectattr("type","equalto", "feature") | list)}}
+    {{items("✔️ Enhancements", nil, false, release["items"] | selectattr("type","equalto", "enhancement") | list)}}
+    {{items("🐛 Bugs", nil, false, release["items"] | selectattr("type","equalto", "bug") | list)}}
 
     {%for type,tmp in release["items"] 
+        | rejectattr("type", "equalto", "schema") 
         | rejectattr("type", "equalto", "bug") 
         | rejectattr("type", "equalto", "feature") 
         | rejectattr("type", "equalto", "enhancement") 
         | rejectattr("type", "equalto", "note") 
         | groupby('type')%}
-    {{items(type | capitalize, false, tmp)}}
+    {{items(type | capitalize, nil, false, tmp)}}
     {%endfor%}
 
 	<div class="alert alert-primary"><b>Ready to update?</b> For Quorum hosted Aucerna Execute environments, email a request to Execute Support.  For on-prem instances of Execute, the installers can be download from <a href="https://clients.aucerna.com/">the Client Portal</a>.</div>
