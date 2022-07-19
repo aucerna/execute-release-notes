@@ -20,3 +20,4 @@ schema,,Added SITE_NUMBER column to SITE table (for automatically generate Site 
 schema,,Added WELL_DOC field to AFE_WELL table (for referencing linked Well),,,
 schema,,Multiple new columns and records in FIELD_MAPPING (used internally to copy data from one document to another),,,
 schema,,Added SYSTEM_LINK field to DOCUMENT_LINK table to identify system managed document links,,,
+feature,"saas,integration","Addition of the ""Reverse Table/Query Replicator"" to the Integration Agent which allows raw query results to be copied from SaaS hosted Execute environments to on-prem databases.  This allows for direct-to-database BI/reporting to continue to work unchanged when migrating from Execute on-prem to Execute SaaS.",,,
