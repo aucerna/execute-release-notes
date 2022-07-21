@@ -9,4 +9,4 @@ In addition to a handful of minor enhancements and fixes, this release includes 
 * Simplify upgrades of all Execute environments
 * Improvements to our integration capabilities (SaaS and on-prem)
 
-**Note:  This updated requires and updated version of the Integration Agent.  1.0.42 or higher.**
+**Note:  This updated requires and updated version of the Integration Agent.  1.0.48 or higher.**
