@@ -4,10 +4,12 @@
     <ul>
       {% for r in releases | sort(attribute="date", reverse=True) %}
          <li class="filterable"><a href="{{r.id}}/index.html">{{r.title}}</a> ({{r.date}})
+         {% if r.whats_new | length > 0 %}
+         (<a href="{{r.id}}/since.html">since</a>) 
+         {% endif %}
          {% if r.hasSchema %}
          <span class="badge bg-danger">Schema Changes</span>
          {% endif %}
-
          </li>
       {% endfor %}
     </ul>

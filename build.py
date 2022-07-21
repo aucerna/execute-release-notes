@@ -66,7 +66,8 @@ for release_id in os.listdir(SOURCE_DIR):
                         with open(detail_file, 'r') as file:
                             detail = frontmatter.loads(file.read())
                         content = detail.content
-                        content = re.sub(r"!\[(.*?)]\((.*?)\)",f"<a href=\"{ln[i]}/\\2\"><img  alt=\"\\1\" class=\"img-fluid\" src=\"{ln[i]}/\\2\" alt=\"\\1\" /></a>", content)
+                        imgpath = f"../{release_id}/{ln[i]}"
+                        content = re.sub(r"!\[(.*?)]\((.*?)\)",f"<a href=\"{imgpath}/\\2\"><img  alt=\"\\1\" class=\"img-fluid\" src=\"{imgpath}/\\2\" alt=\"\\1\" /></a>", content)
                         row["detail_html"] = markdown.markdown(content, extensions=extensions)
                         for k in detail.keys():
                             row[k] = detail[k]
@@ -84,11 +85,20 @@ env = jinja2.Environment(
     autoescape=jinja2.select_autoescape()
 )
 
+# add list of what's new to each release
+for release in releases:
+    allitems = []
+    for r in releases:
+        if r["date"] > release["date"]:
+            for i in r["items"]:
+                allitems.append(i)
+    release["whats_new"] = allitems
+
 # generate index page
 index_template = env.get_template("index.html")
 f = open(os.path.join(OUTPUT_DIR, 'index.html'),'w', encoding="utf-8")
 f.write(index_template.render(
-    title="Aucerna Execute Release Notes",
+    title="Execute Release Notes",
     releases=releases,
     root="."
     ))
@@ -100,6 +110,14 @@ for release in releases:
     os.makedirs(os.path.join(OUTPUT_DIR, release['id']))
     template = env.get_template("release.html")
     f = open(os.path.join(OUTPUT_DIR, release['id'], 'index.html'),'w', encoding="utf-8")
+    f.write(template.render(
+        root="..",
+        release=release,
+        title=release["title"],
+        ))
+    f.close()
+    template = env.get_template("consolidated.html")
+    f = open(os.path.join(OUTPUT_DIR, release['id'], 'since.html'),'w', encoding="utf-8")
     f.write(template.render(
         root="..",
         release=release,
