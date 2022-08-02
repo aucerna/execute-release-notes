@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+feature,system,Better Release Notes Integration,,release-notes,166159
+enhancement,system,"Added additional formula functions inList, firstNonEmpty, DocumentLinkChildrenCount, DocumentLinkCount to calculated fields.",,calc,165736
+enhancement,system,"Technical upgrades to AFE Route for Review screen, Review Tab, and Approval tab. (removing an older 3rd party component)",,,
+enhancement,security,"Updated 3rd party component MomentJS to resolve potential security concern.",,,164813
