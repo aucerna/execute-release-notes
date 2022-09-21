@@ -1,0 +1,12 @@
+type,tags,title,weight,detail,item#
+bug,system,Improved error handling when an Invalid Data Selector / Sync configuration is encountered. ,,,162769
+enhancement,"afe,integration",Improved retry logic for integration with Peloton SaaS. ,,,164806
+enhancement,system,"For those of you not using SSO, we've changed default password strength to more secure defaults (this will have no effect on existing passwords or your current password strength settings, if you've changed those from the defaults).  However, if you aren't using SSO for Execute yet, we strongly suggest setting that up for your PROD environment! ",,,164815
+enhancement,budget,Added new AFE Count and Project Activity Count columns to Project browse reports. ,,,164902
+enhancement,system,"The Database Tool now creates empty schemas, rather than pre-populating them with the tables required by Execute.  This is because Execute will now automatically create/update tables as needed upon startup. ",,,166279
+bug,well delivery,Resolved issue where RTD Disciplines migrated to RTX couldn't be deleted. ,,,166468
+enhancement,afe,"Added the ""NoOwnerEstimatePermission.config"" plugin to plugins_available.  This plugin prevents an owner from changing the AFE estimate after the AFE is routed for review. ",,,166520
+bug,budget,"Fixed an issue where filtering on the Project Snapshot Number in the ""All Snapshots"" report didn't work. ",,,166755
+enhancement,system,Added the ability to override Application Settings via. Environment Variables.  This is primarily intended for automated deployment scenarios. ,,,168165
+enhancement,system,Added a new sample configuration file for configuring default column ordering in a custom table. ,,,171584
+enhancement,afe,Support for pagination in larger datasets from Peloton SaaS. ,,,171660
