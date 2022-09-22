@@ -13,12 +13,12 @@ Previously, some credentials were stored in the Execute database, while others w
 
 With this update, we've added a new credential storage mechanism.
 
-* For those of you with on-prem Execute environments, this is an encrypted file called `credentials.bin` in your service's config folder.  This file is encrypted using the Windows Data Protection API and unusable for any user other than the Execute service user.  (NOTE: that changing the user that runs the Execute service will render all credentials stored in this file unusable!)
+* For those of you with on-prem Execute environments, this is an encrypted file called `credentials.bin` in your service's config folder.  This file is encrypted using the Windows Data Protection API and unusable for any user other than the Execute service user.  (NOTE: this means that changing the user that runs the Execute service will render all credentials stored in this file unusable!)
 * For those of you with Quorum-hosted Execute environments, these credentials are stored securely in an Azure Key Vault.
 
 All external credentials managed from within the Execute Web UI (Quorum On Demand Well Operations (WellEz), Peloton, Enersight, and the Integration Agent) are automatically written to the new encrypted credential mechanism.
 
-Relevant plugins and config file now support a sensitive information placeholder element which will refer to additional credentials stored in the credential store.
+Relevant plugins and config file now support a sensitive information placeholder element which will refer to credentials stored in the credential store.
 
 ### What happens on upgrade?
 
