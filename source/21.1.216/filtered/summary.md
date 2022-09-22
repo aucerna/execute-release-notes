@@ -8,6 +8,7 @@ We've added some new functions to provide more options when building calculated 
 * TableCountFiltered - return the count of a filtered subset of the rows in a table
 
 All of the above work like their non-filtered counterparts, but introduce two new parameters:
+
 1. `filterPath` - is the path to a field on the table row that we are going to use to filter the rows.
 2. `filterValue` - is a text value that we are going to compare to the value of the field in `filterPath`.  The function will only process/include rows where the `filterValue` is a match to the `filterPath` value.
 
