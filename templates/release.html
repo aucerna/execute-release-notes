@@ -26,6 +26,9 @@
    {%for t in item["tags"] %}
    {{ tag(t) }}
    {%endfor%}
+   {% if item["item#"] %}
+   <span class="itemnum">(#{{item["item#"] | safe}})</span>
+   {% endif %}
    <div class="collapse {%if expand%}show{%endif%}" id="collapse_{{item.id}}">
    <div class="card bg-light">
    <div class="card-body item-detail-panel">
@@ -39,6 +42,9 @@
    {%for t in item["tags"] %}
    {{ tag(t) }}
    {%endfor%}
+   {% if item["item#"] %}
+   <span class="itemnum">(#{{item["item#"] | safe}})</span>
+   {% endif %}
    </li>
    {% endif %}
    {% endfor %}
