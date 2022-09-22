@@ -114,6 +114,7 @@ for release in releases:
         root="..",
         release=release,
         title=release["title"],
+        showSearch=1
         ))
     f.close()
     template = env.get_template("consolidated.html")
@@ -122,6 +123,7 @@ for release in releases:
         root="..",
         release=release,
         title=release["title"],
+        showSearch=1
         ))
     f.close()
     for detail_folder in os.listdir(release["source_path"]):

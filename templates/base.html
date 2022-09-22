@@ -36,10 +36,12 @@
       </ul>
 -->
 
+      {% if showSearch %}
       <form class="d-flex">
         <input class="form-control me-2 d-none d-md-block" type="search" placeholder="Filter Page (i.e. #afe)" aria-label="Search" id="searchForm" />
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
       </form>
+      {% endif %}
     </header>
 
     <div class="container d-none" id="filter-warning">
