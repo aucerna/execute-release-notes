@@ -1,7 +1,7 @@
 type,tags,title,weight,detail,item#
 enhancement,"system,security",New system for managing sensitive credentials in Execute and avoiding the need to embed those credentials in plugin files.,1000,credentials,157817
 enhancement,workflow,"Authorized users can now reset/reactivate workflow tasks, causing parts of the workflow to be re-run. ",900,wf,158680
-enhancement,"system,security","Now that Execute is part of the Quorum family, we thought it was a good time to tweaks things a bit.  The product formerly known as ""Aucerna Execute"" is now ""Quorum Execute"" or ""Execute"" for short.  The application icons, logos, and branding have been updated accordingly.  ",,,159350
+enhancement,"system,security","Now that Execute is part of the Quorum family, we thought it was a good time to tweak things a bit.  The product formerly known as ""Aucerna Execute"" is now ""Quorum Execute"" or ""Execute"" for short.  The application icons, logos, and branding have been updated accordingly. ",,,159350
 enhancement,"opsched,enersight","To help keep things tidy, we've added an option to remove schedule activities that are no longer in your Enersight import dataset.",800,,161131
 enhancement,"welldelivery,wellez","If you use OnDemand Well Operations (WellEz) and have AFEs that contain costs that apply to multiple jobs (such as a D&C AFE), we have good news!  We've added support for pushing multi-job AFEs into WellEz. ",800,,162398
 enhancement,"workflow,afe",Workflows created against AFEs are now AFE-version specific and will reset when revisions/supplements are made. ,,,163281
@@ -18,3 +18,4 @@ schema,,WORKFLOW_INSTANCE.ROOT_DOC_GUID for AFE Workflows is now that AFE's DOCU
 schema,,"New columns (REQ_MANUAL_COMPLETE, REACT_ON_DPNDCY) on WORKFLOW_DEF_TASK to track reactivation configuration.",,,158350
 schema,,New column REACTIVATED on WORKFLOW_INSTANCE_TASK to track whether task was reactivated.,,,158350
 enhancement,system,We have also included sample configuration for deploying sub-tabs which may be helpful in simplifying layout for those of you with huge numbers of fields. ,,,172292
+note,,"For those of you managing the Execute application server, the service name in the Services Control Panel has changed from ""Aucerna Execute"" to ""Execute""",,,
