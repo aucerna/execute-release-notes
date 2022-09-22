@@ -9,7 +9,7 @@ enhancement,system,Adjusted browser caching from 24 hours to 15 minutes to avoid
 enhancement,system,Support m-files:// links to the M-Files document management system ,,,166537
 bug,system,Fixed incorrect error message when trying to use a new build of the Database Tool to copy an older (pre-21.1.212) Execute database.,,,166602
 bug,opsched,Fixed issue where unscheduled activities in OpSched would cause a Null Reference Exception when updating Project timing. ,,,171827
-enhancement,system,"We've made the user experience a bit more consistent by ensuring that primary document types (AFE, WELL, RTx, SITE and PROJECT) always have vertical tabs.  As a bonus, we have also included sample configuration for deploying sub-tabs which may be helpful in simplifying layout for those of you with huge numbers of fields. ",,,172292
+enhancement,system,"We've made the user experience a bit more consistent by ensuring that primary document types (AFE, WELL, RTx, SITE and PROJECT) always have vertical tabs.  ",,,172292
 enhancement,system,"We've cleaned up the interface a bit by hiding automatic Wells/Sites/Jobs tabs on Sites, Wells, Projects, etc. if those documents are not being used (i.e. There is not much point in showing an empty Wells tab on a Project if you aren't using Execute's Wells module). ",,,172936
 enhancement,system,"After rolling out Document Validation Rules and Custom Field Permissions, we fully intended to allow you to create those rules on any record in the system.  Unfortunately, overzealous validation shut that down when you tried to actually do that.  We have ""adjusted"" that validation so that you may now add, for example, Document Validation rules to your Partners, AFE Types, etc.",,,174942
 bug,system,Removed the old Aucerna blog widget that was throwing exceptions in the system log. ,,,175280
@@ -17,3 +17,4 @@ enhancement,system,Added new Table*Filtered functions which allow extracting Min
 schema,,WORKFLOW_INSTANCE.ROOT_DOC_GUID for AFE Workflows is now that AFE's DOCUMENT_ID rather than the CHAIN_GUID.,,,163281
 schema,,"New columns (REQ_MANUAL_COMPLETE, REACT_ON_DPNDCY) on WORKFLOW_DEF_TASK to track reactivation configuration.",,,158350
 schema,,New column REACTIVATED on WORKFLOW_INSTANCE_TASK to track whether task was reactivated.,,,158350
+enhancement,system,We have also included sample configuration for deploying sub-tabs which may be helpful in simplifying layout for those of you with huge numbers of fields. ,,,172292

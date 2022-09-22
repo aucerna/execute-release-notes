@@ -13,10 +13,10 @@ Previously, some credentials were stored in the Execute database, while others w
 
 With this update, we've added a new credential storage mechanism.
 
-* For those of you with on-prem Execute environments, this is an encrypted file called `credentials.bin` in your service's config folder.  This file is encrypted using the Windows Data Protection API and unusable for any user other than the Execute service user.  (NOTE: this means that changing the user that runs the Execute service will render all credentials stored in this file unusable!)
+* For those of you with on-prem Execute environments, this is an encrypted file called `credentials.bin` in your service's config folder.  This file is encrypted using the Windows Data Protection API and unusable for any user other than the user running the Execute service.  (NOTE: this means that changing the user that runs the Execute service will render all credentials stored in this file unusable!)
 * For those of you with Quorum-hosted Execute environments, these credentials are stored securely in an Azure Key Vault.
 
-All external credentials managed from within the Execute Web UI (Quorum On Demand Well Operations (WellEz), Peloton, Enersight, and the Integration Agent) are automatically written to the new encrypted credential mechanism.
+All external credentials managed from within the Execute UI (Quorum OnDemand Well Operations (WellEz), Peloton, Enersight, and the Integration Agent) are automatically written to the new encrypted credential mechanism.
 
 Relevant plugins and config file now support a sensitive information placeholder element which will refer to credentials stored in the credential store.
 
@@ -46,4 +46,4 @@ Then, an administrator with the `Edit External Credentials` admin privilege can 
 
 Now, when Execute tries to connect to the accounting database it will evaluate the connection string and replace the placeholder `@@@ACCOUNTING_PASSWORD` with the password we defined in the External Credentials screen.
 
-Note that once added, the password can NEVER again be read from Execute.
+Note that for security purposes the password, once added, can never be read from the Execute UI.  A best practice is to track integration passwords in a separate secure password management application so that they are available if needed in the future.
