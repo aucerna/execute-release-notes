@@ -26,6 +26,7 @@
    {%for t in item["gs"] %}
    {{ tag(t) }}
    {%endfor%}
+   <span class="badge rounded-pill bg-success">{{item.release_id}}</span>
    {% if item["item#"] %}
    <span class="itemnum">(#{{item["item#"] | safe}})</span>
    {% endif %}
@@ -42,6 +43,7 @@
    {%for t in item["tags"] %}
    {{ tag(t) }}
    {%endfor%}
+   <span class="badge rounded-pill bg-success">{{item.release_id}}</span>
    {% if item["item#"] %}
    <span class="itemnum">(#{{item["item#"] | safe}})</span>
    {% endif %}

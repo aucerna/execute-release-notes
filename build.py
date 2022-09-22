@@ -78,6 +78,7 @@ for release_id in os.listdir(SOURCE_DIR):
     for item in release["items"]:
         if item["type"] == 'schema':
             release["hasSchema"] = True
+        item["release_id"] = release["id"]
     releases.append(release)
 
 env = jinja2.Environment(
