@@ -1,0 +1,23 @@
+type,tags,title,weight,detail,item#
+bug,"budget,enersight",Resolved an issue where importing capital from Enersight wouldn't always bring across $0 months.,,,160690
+enhancement,integration,Continued enhancements to Integration Agent when copying data from Execute to an on-prem table.,,,162700
+enhancement,"system,odata",It is now possible to report on Document Links via. OData so that your dashboards can make sense of links between documents in Execute.,,,164442
+enhancement,security,Upgraded components on the drag-and-drop browse report builder screen to replace an out-of-date 3rd party components.,,,164469
+enhancement,security,Upgraded jQuery library to the latest and greatest to resolve some potential security threats. ,,,164814
+bug,integration,"Improvements to the default column types for tables created by the Integration Agent.  Specifically, text fields no longer default to VARCHAR(MAX).",,,166048
+bug,budget,"Fixed issue where disabling the ""Capital WI Override"" field would break the capital grids.",,,171332
+bug,opsched,Enabled configuration of the delimiter in the concatenate operator for Operational Scheduling views. ,,,171493
+bug,workflow,The links in Task notifications now correctly open the task completion form. ,,,175308
+bug,integration,Fixed potential issue where Peloton integration might fail to authenticate when run on daylight savings boundary. ,,,175333
+bug,system,"Sometimes the view rule for a custom tab is simple and concise.  Sometimes it isn't.  For those times when you have an absolutely monster rule controlling when a custom tab should be shown, we've extended the limits for the underlying database column from 4000 characters to a colossal 2GB! ",,,175411
+bug,system,Fixed issue where an admin could break a Custom Business Rule by dragging an invalid block into a loop block.,,,175678
+bug,workflow,Fixed issue where reactivated task icon would not show for task assignee. ,,,175679
+bug,workflow,Added clarification warning to task completion rule configuration regarding rules that consist only of completion instruction blocks. ,,,175758
+enhancement,security,"On system startup for a brand-new database, Execute will now generate a secure random password for the System Admin user and store it in initial_system_admin_password.txt in the service's config folder. ",,,176042
+bug,system,Resolved database migration issue for Postgres-based databases.,,,176146
+enhancement,system,Added the ability to define additional System Links. ,,links,176280
+enhancement,system,"Changed the suffix in email notifications to use the user-facing Environment Label (shows in the top-bar) instead of the Environment Name (used for keeping track of services in the Windows Services control panel).  We typically recommend the Environment Label for production environments be empty which, with this change, means we can avoid confusion when an email like ""Execute - Well Diego 7a Status Changed (Production)""... Did Diego 7a go into production?!!!  If you do have email notifications enabled in your TEST environment and you do not have an Environment Label set (the orange badge in the top-left of your TEST environment), contact Execute support to get the environment label set so that TEST and PROD emails are able to be differentiated from each other. ",,,178493
+enhancement,workflow,"In the previous update, we introduced the ability to reactivate part of the workflow.  Unfortunately, when subworkflows were involved, this reactivation was ""excessively thorough"" and would inadvertently reactivate tasks that shouldn't have been reactivated.  With this update, we endeavor to make the reactivation process involving subworkflows ""do the right thing"".   ",,,178952
+enhancement,system,Add a new FormatDate function to calculate fields which makes it easy to convert a date/time field to text in a specific time-zone and format. ,,formatDate,178988
+enhancement,system,"Sometimes you just want to spread the word... to an existing Execute user.  We've added a new ""notify specified user"" block that can be used to notify a specific Execute user. ",,notify,179961
+schema,,Modified column type on DOCUMENT_VIEW.HANLDES_EXPRESSION from VARCHAR(4000) to VARCHAR(MAX) to allow storing larger rules.,,,
