@@ -21,3 +21,4 @@ enhancement,workflow,"In the previous update, we introduced the ability to react
 enhancement,system,Add a new FormatDate function to calculate fields which makes it easy to convert a date/time field to text in a specific time-zone and format. ,,formatDate,178988
 enhancement,system,"Sometimes you just want to spread the word... to an existing Execute user.  We've added a new ""notify specified user"" block that can be used to notify a specific Execute user. ",,notify,179961
 schema,,Modified column type on DOCUMENT_VIEW.HANLDES_EXPRESSION from VARCHAR(4000) to VARCHAR(MAX) to allow storing larger rules.,,,
+enhancement,integration,"Added an option to supress the automatic creation of Wells when import Projects from Val Nav or Enersight (it will, however, continue to link to an existing well).",,,175310

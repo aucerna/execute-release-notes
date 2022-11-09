@@ -19,3 +19,4 @@ schema,,"New columns (REQ_MANUAL_COMPLETE, REACT_ON_DPNDCY) on WORKFLOW_DEF_TASK
 schema,,New column REACTIVATED on WORKFLOW_INSTANCE_TASK to track whether task was reactivated.,,,158350
 enhancement,system,We have also included sample configuration for deploying sub-tabs which may be helpful in simplifying layout for those of you with huge numbers of fields. ,,,172292
 note,,"For those of you managing the Execute application server, the service name in the Services Control Panel has changed from ""Aucerna Execute"" to ""Execute""",,,
+enhancement,"system,security",Execute previously relied on the older NTLM protocol for on-prem single sign-on.  In this release we've also enabled Kerberos support.  If this causes problems on your environment either NTLM or Kerberos can be disabled.,,kerberos,175304

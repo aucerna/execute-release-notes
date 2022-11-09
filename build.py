@@ -26,6 +26,7 @@ releases = []
 for release_id in os.listdir(SOURCE_DIR):
     release_path = os.path.join(SOURCE_DIR, release_id)
     summary_file = os.path.join(SOURCE_DIR, release_id, "summary.md")
+    agent_file = os.path.join(SOURCE_DIR, release_id, "agent.txt")
     items_file = os.path.join(SOURCE_DIR, release_id, "items.csv")
 
     release = {}
@@ -35,6 +36,10 @@ for release_id in os.listdir(SOURCE_DIR):
     if os.path.isdir(release_path) and os.path.isfile(summary_file):
         with open(summary_file, 'r') as file:
             summary = frontmatter.loads(file.read())
+
+    if os.path.isdir(release_path) and os.path.isfile(agent_file):
+        with open(agent_file, 'r') as file:
+            release["agent"] = file.read().strip()
 
     for k in summary.keys():
         release[k] = summary[k]
@@ -86,6 +91,14 @@ env = jinja2.Environment(
     autoescape=jinja2.select_autoescape()
 )
 
+# fill in agent versions
+agent = ''
+for release in sorted(releases, key= lambda r: r["date"]):
+    if 'agent' in release:
+        agent = release["agent"]
+    else:
+        release["agent"] = agent
+
 # add list of what's new to each release
 for release in releases:
     allitems = []
@@ -94,6 +107,7 @@ for release in releases:
             for i in r["items"]:
                 allitems.append(i)
     release["whats_new"] = allitems
+
 
 # generate index page
 index_template = env.get_template("index.html")

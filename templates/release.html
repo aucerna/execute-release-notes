@@ -63,6 +63,10 @@
     </div>
     {% endif %}
 
+    {% if release["agent"] %}
+	  <div class="alert alert-info">This release requires Integration Agent version {{release["agent"]}}.</div>
+    {% endif %}
+
     <div class="release-summary">
     {{release["summary_html"] | safe}}
     </div>
