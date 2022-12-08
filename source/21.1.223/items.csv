@@ -5,3 +5,4 @@ enhancement,workflow,"A new column, ""Workflow Applicable"", was added to Workfl
 bug,"integration,enersight,budget","We've changed the Enersight integration to prevent Execute from sending updated Project/Well Name when pushing Capital to Enersight.  Doing so would cause a mismatch between the name in the capital and the name in the well list.  In a future update, Execute will add support for updating the attributes in the Enersight well list directly.",,,222666
 enhancement,integration,"Updated the Integration Agent to make the ""httpConnection.config"" and ""databaseConnection.config"" files optional on startup.",,,227267�
 bug,"system","Fixed an issue with the new secure credential storage where only the first per-user credential entered would be saved.",,,228012
+enhancement,"system","Added new formula functions to simplify pulling text data from linked documents.",,textfirst,228015
