@@ -1,0 +1,7 @@
+type,tags,title,weight,detail,item#
+feature,system,Added support for multiple columns in custom tabs!,,views,168243
+enhancement,workflow,"We've improved handling workflows when their root document is archived (using your document archive rules).  Execute will no longer start new workflows, or update existing ones, on archived documents.  In addition, tasks against archived documents are also considered archived on reports.",,,178580
+enhancement,workflow,"A new column, ""Workflow Applicable"", was added to Workflow Task reports allowing you to find active workflows that probably don't need to be there (based on the current rules and data).",,,178844
+bug,"integration,enersight,budget","We've changed the Enersight integration to prevent Execute from sending updated Project/Well Name when pushing Capital to Enersight.  Doing so would cause a mismatch between the name in the capital and the name in the well list.  In a future update, Execute will add support for updating the attributes in the Enersight well list directly.",,,222666
+enhancement,integration,"Updated the Integration Agent to make the ""httpConnection.config"" and ""databaseConnection.config"" files optional on startup.",,,227267�
+bug,"system","Fixed an issue with the new secure credential storage where only the first per-user credential entered would be saved.",,,228012
