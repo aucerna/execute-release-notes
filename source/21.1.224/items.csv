@@ -1,0 +1,6 @@
+type,tags,title,weight,detail,item#
+enhancement,admin,Major performance improvements to old-style create rights editing. ,,,228247
+enhancement,integration,Document sync now supports automatic document inactivation for document types which don't have an out-of-the-box ACTIVE column. ,,,228269
+enhancement,admin,"Added the ability to use a subtab view (a tab with multiple subtabs) as a child/sub-view on another view. An almost incomprehensible sentence but, for those of you waiting for this... it's here!",,,228531
+bug,system,Resolved issue where custom tabs wouldn't correctly hide the time component of unzoned date fields. ,,,229728
+bug,system,Resolved issue where tab visibility rules were ignored on subviews.,,,229730
