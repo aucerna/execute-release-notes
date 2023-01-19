@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+enhancement,afe,"The new auto ad hoc reviewer function now works with TEXT or calculated fields, rather than just LIST type fields.",,,229993
+enhancement,system,Added new DocumentLinkSum functions to calculated fields that make it possible to add up values from linked documents.,,calc,230006
+bug,system,Resolved issue where calculated fields would return the incorrect DOCUMENT_ID from linked child records.,,,230002
+bug,system,Resolved issue where Execute would take HOURS to start up for customers with many AFE document links.  ,,,230443
