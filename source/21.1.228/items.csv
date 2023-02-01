@@ -1,0 +1,12 @@
+type,tags,title,weight,detail,item#
+bug,afe,Restored the handy behavior where clicking the envelope icon next to an AFE approver would automatically add a link back to that AFE in the email body. ,,,180732
+enhancement,loaders,We've added a new Data Loader that allows bulk loading links between documents in Execute. ,,,229813
+enhancement,reporting,"We've increased your filtering options with a new ""Doesn't Start With"" operator you can use when building browse reports. ",,,230542
+bug,system,"Fixed an issue where deleted attachments were, confusingly, still showing in the dropdown for attachment fields. ",,,230569
+enhancement,system,"We've turned on the ""Comment Preview"" column for all report types, making it easy to report on the latest comment for your projects, wells, sites and any other document you can think of. ",,,230763
+enhancement,"system,admin,loader","The data loaders now correctly create any required ""system managed"" document links on load, instead of requiring you to restart the service for those to show up. ",,,230767
+enhancement,system,It is now possible to bulk load calculated fields and their formula (making it much easier to migrate calculated fields from one environment to another). ,,,230769
+bug,system,"Fixed minor issue where non-AFE Data Selector's included a message incorrectly referring to ""AFE"". ",,,230771
+bug,system,"Fixed a minor HTML formatting issue which would, sometimes, cause the email notification footer to be incorrectly highlighted as a link. ",,,230775
+enhancement,"peloton,afe",The job start date is now appended to the Job name when linking an AFE to a Job in Peloton to help differentiate between multiple jobs of the same type on the same well.,,,230037 
+bug,"enersight,opsched",Resolved an issue where the importing $0 activities from Enersight could cause the import to fail.,,,231016
