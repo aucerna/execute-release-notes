@@ -1,5 +1,5 @@
 type,tags,title,weight,detail,item#
 bug,system,Fixed an issue where the Help Text configuration field was limited to 50 characters instead of the intended 2000. ,,,231980
-bug,system,Fixed an issue where the custom tab text section fields was limited to 50 characters instead of the intended 2000.,,,232050
+bug,system,Fixed an issue where custom tab text section fields were limited to 50 characters instead of the intended 2000.,,,232050
 bug,system,Resolved an issue where new-style grids configured via. a plugin would not honor the configured sort column. ,,,232293
 bug,peloton,Resolved a critical bug with the integration to on-prem WellView/SiteView where the API calls to retrieve wells and jobs would fail. ,,,232847
