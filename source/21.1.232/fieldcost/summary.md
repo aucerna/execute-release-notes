@@ -5,6 +5,7 @@ In this update, we've made some changes to how the import of Field Costs from Pe
 * We've cleaned up the behavior of the `Submitted after Field Cost Import` setting.  
     * When set to Yes, all imported costs will be imported and marked as submitted automatically.  
     * When set to No, imported costs will be imported as unsubmitted. Additionally, if we are importing changed costs over a month that the owner of those costs has already submitted, the import will now unsubmit the cost to trigger a re-review.
+* Previously, the import wouldn't overwrite submitted costs by default (creating some issues you'd end up with excessive months of carryover). In this update, the import WILL overwrite submitted costs after the Cut-off date if they are changed.
 
 ### What if I want to instruct Execute to ignore (and not change) known correct costs?
 
