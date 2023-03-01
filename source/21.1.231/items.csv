@@ -1,0 +1,2 @@
+type,tags,title,weight,detail,item#
+bug,system,Fixed an issue where working interest fields (ending in _WI) in custom grids did not correctly honor the working interest as decimal setting. ,,,230559

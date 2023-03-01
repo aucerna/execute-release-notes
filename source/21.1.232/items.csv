@@ -1,0 +1,3 @@
+type,tags,title,weight,detail,item#
+bug,"peloton,accruals,fieldcost,important","Fixed multiple issues in Field Cost import affecting imports from WellView, SiteView and WellEz.",,fieldcost,230959
+note,"important","This update changes how the field cost import from WellView, SiteView and WellEz works.  If you use this integration, please review the detailed notes or contact support before proceeding.",,,
