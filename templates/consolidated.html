@@ -39,9 +39,9 @@
    </div>
    </li>
    {% else %}
-   <li class="detail-item item filterable">{{item["title"]}}
+   <li class="detail-item item filterable">{{item["title"]}} 
    {%for t in item["tags"] %}
-   {{ tag(t) }}
+   {{ tag(t) }} 
    {%endfor%}
    <span class="badge rounded-pill bg-success">{{item.release_id}}</span>
    {% if item["item#"] %}
