@@ -23,7 +23,7 @@
    {% for item in items | sort(attribute="weight", reverse=True) %}
    {% if item["detail_html"] %}
    <li class="detail-item item filterable"><a data-bs-toggle="collapse" href="#collapse_{{item.id}}">{{item["title"]}}</a>
-   {%for t in item["gs"] %}
+   {%for t in item["tags"] %}
    {{ tag(t) }}
    {%endfor%}
    <span class="badge rounded-pill bg-success">{{item.release_id}}</span>
