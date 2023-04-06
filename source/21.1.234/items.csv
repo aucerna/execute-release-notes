@@ -13,7 +13,7 @@ enhancement,integration agent,Improved the error message when the Integration Ag
 bug,afe,"For those of you dealing with monster print jobs (taking longer than 30 minutes to run), we've fixed the issue where, after waiting all that time, your download would fail. ",,,234123
 enhancement,opsched,"Added a new schedule validation that highlights activities in a step group with inconsistent use of the ""Scheduled"" flag.  For activities in a step group, it is required/expected that they all be scheduled, or all be unscheduled. ",,,234126
 bug,system,"Fixed an issue where Execute wouldn't reconnect/reload after a service outage (for example, after restarting the service).  Nothing a click of the Refresh button wouldn't solve, but this is nicer now. ",,,234148
-bug,system,Fixed an issue where text filters on the browse screens would incorrectly complain about the text length of the filter. ,,,234300
 bug,wellez,"Resolved an issue where linking an AFE to a WellEz job would sometimes fail with a validation error on  ""NumberValue"". ",,,234423
 bug,"workflow,formula",Fixed an issue where calculated fields that referred to deleted workflow tasks could cause other calculated fields to inexplicably fail too.  ,,,234905
 enhancement,workflow,"Added some nice navigation arrows to make it easier to open the related root document for a workflow task from the dashboard widgets, and the task completion popup. ",,nav,235278
+schema,,Added new APIKEY* tables to store API Keys.,,,
