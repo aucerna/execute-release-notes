@@ -17,3 +17,4 @@ bug,wellez,"Resolved an issue where linking an AFE to a WellEz job would sometim
 bug,"workflow,formula",Fixed an issue where calculated fields that referred to deleted workflow tasks could cause other calculated fields to inexplicably fail too.  ,,,234905
 enhancement,workflow,"Added some nice navigation arrows to make it easier to open the related root document for a workflow task from the dashboard widgets, and the task completion popup. ",,nav,235278
 schema,,Added new APIKEY* tables to store API Keys.,,,
+schema,,"Added ""CREATOR"" columns to RTX, RTD, RTX_H and RTD_H tables.",,,
