@@ -1,0 +1,3 @@
+Plugins that connect to a database via the integration agent **MUST** be updated to work in the new version.  This work will need to be undertaken by Quorum Support/Application Delivery when upgrading your SaaS environment.  We'll be sure to do that as part of your upgrade.
+
+Other plugins that contain connection strings will continue to work but should eventually be updated to take advantage of the new connection string editor.
