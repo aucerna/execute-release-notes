@@ -16,7 +16,7 @@ Most plugins that contain a connection string, such as this:
 <ProviderType>SnowflakeProvider</ProviderType>
 ```
 
-Can then be updated to refer to the defined connection string like so.  Note: The "ProvideType" is now captured in the connection string and should be removed from the plugin file.  
+Can then be updated to refer to the defined connection string like so.  Note: The "ProviderType" is now captured in the connection string and should be removed from the plugin file.  
 
 ```
 <ConnectionString>Connection List=Server; Id=Snowflake</ConnectionString>

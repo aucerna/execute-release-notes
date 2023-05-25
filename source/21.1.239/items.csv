@@ -5,3 +5,4 @@ enhancement,"admin,workflow","Administrators with the ""Can Delete Top-level Wor
 enhancement,workflow,"Emailed workflow task links now point to the appropriate root document (Well, Job, AFE, etc.) instead of the Workflow Instance",,,235449
 note,important,"If you are using the Integration Agent (for Quorum-hosted Execute), we will need to make some minor changes to your plugins as part of your upgrade.",,agent,
 feature,admin,Administrators can now effortlessly manage database connections from within Execute,2,cs,180679
+schema,,"New tables ""PLUGINS*"" added for in-app plugin management",,,

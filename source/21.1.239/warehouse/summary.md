@@ -18,7 +18,7 @@ To enable the publishing of Execute data to Snowflake...
 2. Copy `plugins_available\integration\product_integrations\warehouse\non_production\snowflake.config` to your `plugins_available` folder or add as a new in-app plugin, and restart Execute.
 3. Create a new "Connection String" (Tools > Configuration > Connection Strings) called "Snowflake" with the credentials and information for your Snowflake environment.
 4. Run "Tools > Synchronization > Snowflake Schema Publisher" to create tables and helper views in your Snowflake database.  This same process would also be run any time you want to update the helper views to include newly created fields in Execute.
-5. Run "Tools > Synchronization > Snowflake Document Publisher" to pre-populate your Snowflake database with your existing data (latest version of each non-deleted document).  This would typically only every be run once.
+5. Run "Tools > Synchronization > Snowflake Document Publisher" to pre-populate your Snowflake database with your existing data (latest version of each non-deleted document).  This would typically only ever be run once.
 6. Execute will periodically and automatically push incremental updates to Snowflake.  You can adjust this timing by changing the "Integration/Snowflake/Snowflake Queue Wait" configuration setting.
 
 ![Settings](settings.png)
@@ -30,7 +30,7 @@ To enable the publishing of Execute data to SQL Server/Azure SQL...
 3. Copy `plugins_available\integration\product_integrations\warehouse\non_production\sqlwarehouse.config` to your `plugins_available` folder or add as a new in-app plugin, and restart Execute.
 4. Create a new "Connection String" (Tools > Configuration > Connection Strings) called "SQLWarehouse" with the credentials and information for your database.
 5. Run "Tools > Synchronization > SQL Warehouse Schema Publisher" to create tables and helper views in your  database.  This same process would also be run any time you want to update the helper views to include newly created fields in Execute.
-6. Run "Tools > Synchronization > SQL Warehouse Document Publisher" to pre-populate your database with your existing data (latest version of each non-deleted document).  This would typically only every be run once.
+6. Run "Tools > Synchronization > SQL Warehouse Document Publisher" to pre-populate your database with your existing data (latest version of each non-deleted document).  This would typically only ever be run once.
 7. Execute will periodically and automatically push incremental updates to your database.  You can adjust this timing by changing the "Integration/SQL Warehouse/SQL Warehouse Queue Wait" configuration setting.
 
 For both Snowflake and SQL Server, the published data is:
