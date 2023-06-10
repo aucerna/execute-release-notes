@@ -1,0 +1,11 @@
+type,tags,title,weight,detail,item#
+feature,"opsched,well delivery",Improvements to standalone use of Execute's Operational Scheduling when using the Jobs module.,,jobs,160969
+feature,ui,"When copying a document in Execute, there is now a checkbox to copy the document links.",,,223503
+bug,ui,"Fixed a spelling mistake in the pop-up for Document Validation Rules.  Two L's in ""Following"".  Oops!",,,228072
+enhancement,integration,Removed unused WSDL and XML examples from API Documentation.  JSON is our path forward.,,,235124
+enhancement,ui,Added the attachment date to the dropdown on Attachment Fields to help you pick the right attachment. (This idea was raised as part of our last CAB meeting).,,,236143
+bug,ui,Resolved an issue where calculated fields returning very long text values would incorrectly show a length warning.,,,237901
+bug,integration,"Fixes and improvements to the Snowflake / SQL Warehouse beta functionality.  Deleted data is now visible in the helper views/tables.  Introduced ""Materialized Views"" in SQL Server databases for performance purposes.",,,240107
+schema,,New tables for the newly added Schedule Activity Type configuraton (SCH_ACTIVITY_TYPE*),,,
+schema,,"New fields added to RTX/RTX_H to support Job Scheduling (DURATION, JOB_START, JOB_END, JOB_IS_SCHEDULED)",,,
+schema,,Note that the fields SCHED_START and SCHED_END have been supersceded by JOB_START and JOB_END and will be removed in an upcoming update.,,,
