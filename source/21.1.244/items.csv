@@ -1,0 +1,24 @@
+type,tags,title,weight,detail,item#
+enhancement,budget,The Update Forecasts grid now supports sorting and filtering to make it more pleasant when managing large number of capital projects. ,,,161327
+feature,integration,"Future versions of the Integration Agent will automatically update themselves as necessary to avoid issues where integrations break because of incompatible Execute and Integration Agent versions.  Note that manual steps are required to upgrade the Integration Agent this time, but future updates will happen automatically as required. ",,agent,166459
+enhancement,integration,The Integration Agent status information has moved into the Help / About screen. ,,,179893
+enhancement,"security,integration","We've included the ""ConnectionStringEncryptor.exe"" helper in the Integration Agent package to make it easier for those who want to store encrypted database credentials in the databaseConnections.config file. ",,,216364
+enhancement,admin,"Administrators can now delete unneeded User Roles, Accounts, User Groups, Partners, and Position Rules.",,,231563
+bug,integration,Resolved an issue using the Integration Agent to replicate tables containing Small Int columns. ,,,236711
+bug,,Fixed some minor issues where buttons in the schedule toolbar wouldn't align properly when viewing a schedule in Execute ,,,237228
+enhancement,opsched,Minor cosmetic enhancements and fixes to the new Job Scheduling capability.  ,,,237776
+bug,"security,workflow,api","Fixed permissions on the ""Workflow/UpdateWorkflowInstances"" API to ensure that it can not be called by a non-admin user. ",,,239351
+bug,opsched,Resolved issue where the Schedule's data grid would sometimes show activities in the wrong timezone. ,,,240344
+bug,opsched,"Removed the empty and unused ""Project Report"" tab from the Schedule's Configuration tab.   ",,,240961
+bug,budget,Resolved issue where the sorting of the Capital Summary and Monthly Capital Grids (Projects) were different. ,,,241067
+enhancement,system,"If exponents are your thing, you'll be happy to know that Execute's formulas now support the ""Pow"" function! ",,,241158
+bug,integration,Resolved an issue where the Integration Agent's table replicator didn't correctly handle Oracle numeric types with defined precision. ,,,241380
+bug,integration,"Fixed the sample plugin ""replicate_queries_from_execute.config.sample""",,,241568
+bug,integration,Resolved issue where Data Selectors were unable to set boolean fields properly. ,,,241635
+enhancement,integration,Performance fixes to OData column validity checking on system startup. ,,,241699
+bug,system,Improvemed the automatic recognition of URLs in text fields to better handle URLs containing parenthesis. ,,,241881
+bug,workflow,Separators now display properly when viewing a Task pop-up window. ,,,241936
+bug,integration,Resolved an embarassing issue where the newly introduced API Keys were inadvertently consuming a license. ,,,242019
+enhancement,integration,Added the ability to synchronize schedules with Quorum's Dataflow. ,,,243278
+schema,,"New column ""DF_CONFIGURATION"" added to SCHED and SCHED_H to store Dataflow integration configuration.",,,
+note,,The Integration Agent installer is now included in Execute.  Future updates will be automatically deployed.,,,
