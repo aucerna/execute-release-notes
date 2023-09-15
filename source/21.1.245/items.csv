@@ -1,0 +1,4 @@
+type,tags,title,weight,detail,item#
+bug,afe,Resolved issue where the Review Completed Date field would only consider System Reviewers.,,,236197
+bug,system,"Resolved an issue where errors returned by Document Validation Rules were formatted as unassuming ""Info"" messages, instead of the much more alarming ""Error"" styling as intended.",,,241345
+bug,budget,Resolved an issue showing date-type columns in the Project Reforecasting screen.,,,
