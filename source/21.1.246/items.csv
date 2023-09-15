@@ -19,3 +19,4 @@ enhancement,system,"If you are a heavy user of Document Links, you'll be overjoy
 feature,system,Improved support for integration with document management systems such as SharePoint and DynamicDocs. ,,doc,246071
 schema,,"Added a new field ""IS_REMOVED_VERSION"" to the AFE and AFE_H tables to differentiate between deleted AFEs and deleted AFE versions (unrevise/unsupplement) to support the new Undelete feature.",,,
 enhancement,afe,Sample configuration for integration with Quorum's OnDemand Accounting system,,,
+note,,"If you are currently using Execute's legacy integration with SharePoint, please get in touch with Quorum Support prior to upgrading to this version.  ",,,
