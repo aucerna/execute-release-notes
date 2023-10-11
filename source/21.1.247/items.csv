@@ -1,0 +1,15 @@
+type,tags,title,weight,detail,item#
+enhancement,security,Migrated the Job's Copy Teams backend toolkit from Angular to React.    This is part of a larger initiative to eliminate our dependency on an aging version of Angular.,,,171883
+enhancement,system,Increased the default size for formula editing windows to make editing those monster formulas more pleasant than trying to peer at it four lines at a time. ,,,244477
+bug,workflow,"Resolved an issue where  ""re-evaluate workflow "" would incorrectly delete sub-workflows. ",,,244969
+enhancement,integration,"A while ago, we added a great feature to Execute's Document Synchronization to automatically inactivate records when they no longer appeared in the source data.  Now, we'll automatically reactivate those records if they come back! ",,,245783
+enhancement,"admin,system","We've added a new  ""Copy from Template "" button when creating a new in-app plugin to make it much easier to preload your plugin with a sample from the plugins_available folder. ",,,246432
+enhancement,"admin,reporting","Administrators with the  ""Manage Excel Templates "" privilege can now upload and manage Excel Template Reports from Tools > Configuration > Manage Excel Template Reports. ",,,246435
+enhancement,integration,Added support for publishing Execute events to a file on a remote server using SFTP. ,,,246490
+bug,system,Document Link Summary tabs are now hidden on un-saved documents to avoid an annoying pop-up error. ,,,246910
+bug,"system,security",Support packages no longer inadvertently include some security sensitive configuration files.,,,247060
+enhancement,afe,"Added new AFE-level calculated fields to allow reporting on reviewer and approver counts (both totals, and those who have completed their work). ",,,247494
+bug,integration,Resolved issue where API keys were still inadvertently taking a license in some situations. ,,,247599
+enhancement,security,Changed the default minimum password length to 12 (doesn't affect environments using SSO). ,,,247637
+enhancement,admin,Added handy Select All / Select None buttons to the support package generation screen. ,,,247724
+bug,integration,Resolved issue where slow connectivity to Azure SQL or Snowflake could block saving documents elsewhere in Execute. ,,,247975
