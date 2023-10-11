@@ -3,7 +3,7 @@ enhancement,security,Migrated the Job's Copy Teams backend toolkit from Angular 
 enhancement,system,Increased the default size for formula editing windows to make editing those monster formulas more pleasant than trying to peer at it four lines at a time. ,,,244477
 bug,workflow,"Resolved an issue where  ""re-evaluate workflow "" would incorrectly delete sub-workflows. ",,,244969
 enhancement,integration,"A while ago, we added a great feature to Execute's Document Synchronization to automatically inactivate records when they no longer appeared in the source data.  Now, we'll automatically reactivate those records if they come back! ",,,245783
-enhancement,"admin,system","We've added a new  ""Copy from Template "" button when creating a new in-app plugin to make it much easier to preload your plugin with a sample from the plugins_available folder. ",,,246432
+enhancement,"admin,system","We've added a new  ""Copy from Sample "" button when creating a new in-app plugin to make it much easier to preload your plugin with a sample from the plugins_available folder. ",,,246432
 enhancement,"admin,reporting","Administrators with the  ""Manage Excel Templates "" privilege can now upload and manage Excel Template Reports from Tools > Configuration > Manage Excel Template Reports. ",,,246435
 enhancement,integration,Added support for publishing Execute events to a file on a remote server using SFTP. ,,,246490
 bug,system,Document Link Summary tabs are now hidden on un-saved documents to avoid an annoying pop-up error. ,,,246910
