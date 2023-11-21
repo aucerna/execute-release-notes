@@ -1,6 +1,6 @@
 type,tags,title,weight,detail,item#
 bug,system,Fixed an issue where the Update Multiple (triggered from the Browse) feature would fail if you had two or more columns with identical names. Note that this fix prevents the overall feature from breaking when there are duplicate columns. Update Multiple is not able to update columns where the name is not unique. ,,,236586
-feature,"admin,system","Initial release of the Configuration Migration feature which makes it easier to migrate configuration from one environment (such as a TEST environment) an another environment (such as PROD). This feature is new and still in active development. At this time, we strongly recommend working with someone from Quorum Professional Services if you need to make use of this tool. ",,,239691
+feature,"admin,system","Initial release of the Configuration Migration feature which makes it easier to migrate configuration from one environment (such as a TEST environment) to an another environment (such as PROD). This feature is new and still in active development. At this time, we strongly recommend working with someone from Quorum Professional Services if you need to make use of this tool. ",,,239691
 bug,system,Resolved issues where Execute would occasionally incorrectly start up in recovery mode and require a restart. ,,,241065
 bug,system,Resolved an issue where a misconfigured plugin (containing a reference to the removed AgentDbAccessFactory) would prevent the service from starting correctly.,,,241439
 bug,system,Prevent using the Unzoned feature on date fields in the Schedule document. All dates on a schedule must be relative to the schedule's timezone and may not be unzoned. ,,,245404
@@ -8,6 +8,6 @@ enhancement,"system,security",Updated version of SQL Server database library. ,,
 enhancement,workflow,Improved handling of newly added tasks when rolling out a workflow against a complete or mostly complete workflow instance. Tasks autocomplete if the tasks that immediately follow are also complete and the task is set to require manual completion or the task's completion rule is met.,,,247181
 bug,system,Resolved an issue where inactivating a field could break the column configuration popup on the browse screen if that column as previously selected as a visible column. ,,,247707
 enhancement,integration,Updated integration with Dynamic Docs to work with the latest DynamicDocs APIs. ,,,249213
-bug,system,Fixed an issue where custom formula fields we're not checked against other fields for overlapping names. ,,,250039
+bug,system,Fixed an issue when creating a new custom field.  Sometimes the new fields was incorrectly checked against other fields for overlapping names. ,,,250039
 bug,afe,Fixed the issue introduced in the previous release where the AFE Print pop-up would show an DataTables Warning. ,,,252024
 bug,integration,Various fixes to Execute's integration with Dataflow. ,,,253328
