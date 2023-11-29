@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+enhancement,opsched,Various performance improvements to Operational Scheduling,,,244269
+bug,system,"Fixed an issue where the new ""Document Link Summary"" tabs would break if a document was linked to another document of the same type.",,,252853
+bug,system,Various improvements to debug logging on invalid JSON requests (only visible when debug logging is enabled).,,,255396
+enhancement,opsched,Having trouble finding a particular well or activity on your schedule?  We have a thing for that!  The new schedule search box makes it incredibly easy to find an activity that is hiding somewhere in your schedule!,,,244269
