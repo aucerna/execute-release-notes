@@ -1,0 +1,7 @@
+type,tags,title,weight,detail,item#
+bug,workflow,"Resolved an issue where an administrator setting the ""Fields that are cleared on task reactivation"" list on a workflow's Reactivation Rules tab, switching to a different tab, and coming back again would be greeted by an unexpected (and unintentional) error.",,,246266
+bug,"welldelivery,rtx",Resolved an issue where RTX disciplines that were migrated from the former RTD module were unable to be removed from the RTX.,,,246500
+bug,admin,"When adding a new ""Additional Storage Table"" we've added a message to let you know that it was successfully added so that you aren't left wondering, ""Wait.  That happened so quickly!  Did something happen?""",,,249709
+enhancement,admin,"We've made it easier for administrators to create plugins (such as Data Selectors and Synchronizations) that point at the Execute database by adding a new database alias ""EXECUTE_INTERNAL"" which can be used in your plugin's connection string. (Ex: ""Connection List=server; Id=EXECUTE_INTERNAL"")",,,254272
+bug,integration,We've resolved an issue where the Integration Agent was unable to replicate the results of a database calculation/function from Oracle into Execute.,,,256139
+bug,integration,We've improved the reliability of our AzureSQL Data Warehouse functionality by increasing the timeouts to allow slow running queries time to finish.,,,256838
