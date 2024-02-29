@@ -1,0 +1,10 @@
+type,tags,title,weight,detail,item#
+bug,"integration,valnav",Fixed 'null reference' exception that could occur when re-importing projects from Val Nav. ,,,248308
+enhancement,security,Replaced a legacy 3rd party component used by the header on a Job's Discipline tabs. ,,,257877
+enhancement,security,Replaced a legacy 3rd party component used by the header on Discipline configuration tabs.,,,258264
+bug,performance,Resolved critical memory leak in Operational Scheduling module that could cause the service to eventually run out of memory and become unresponsive. ,,,258407
+bug,"integration,peloton",Minor fixes and improvements to the recently release Peloton API-based integration. ,,,259593
+bug,"integration,wellez",Resolved issue where 'On Demand Well Operations Entity/Job Name Sync' would fail to run. ,,,259831
+bug,"integration,budget,valnav",Resolved issue where 'Can Product After' flag was not being correctly read from Val Nav Template when importing projects from Val Nav. ,,,259883
+enhancement,"integration,valnav",Improved error messages when exporting projects to Val Nav. ,,,259893
+enhancement,integration,"Added a new 'TABLE' mode to Execute's SQL Warehouse feature that separates the pushing of data to the warehouse, from the processing of that data into the helper views. This mode is intended for large environments, or those where the existing views aren't performant. ",,,260441
