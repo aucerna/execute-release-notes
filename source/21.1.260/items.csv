@@ -1,0 +1,7 @@
+type,tags,title,weight,detail,item#
+enhancement,system,Added a new service health endpoint to simplify external monitoring of Execute services. ,,,254999
+bug,"workflow,admin",Resolved an issue where the task reactivation button would disappear when paging through tasks on large workflows. ,,,257198
+enhancement,integration,Improved the error message when an HTTP source is not found in the Integration Agent's configuration. ,,,259445
+enhancement,"system,admin","Added a new Regular Expression validation rule to allow building all manner of interesting field validation rules.  i.e. numeric, serial numbers, phone numbers, ...  It even allows you to specify that the field should contain unique values. ",,,259850
+enhancement,system,Document Link Summary Tabs now support Extended Document Links. ,,,262829
+bug,"integration,wellez",The WellEz Estimate Account Filter now respects the path specified in the plugin file. ,,,265670

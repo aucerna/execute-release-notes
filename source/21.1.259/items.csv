@@ -1,0 +1,9 @@
+type,tags,title,weight,detail,item#
+bug,administration,"When we rolled out the new configuration migration functionality, we inadvertently locked down several of our implementation tool loaders to only work for administrators with the configuration migration privilege.&nbsp; We have restored the original permissions. ",,,255269
+bug,integration,Resolved an issue where long-running (greater than 30 minutes) jobs using the Integration Agent would fail. ,,,258072
+enhancement,administration,"When building browse reports on Custom Tab configuration, administrators can now see the field's display name and not just the database column name. ",,,258791
+enhancement,security,Upgraded the 3rd party component used by the user permissions screen. ,,,259244
+enhancement,integration,Improved documentation on the 'Reset Task' API. ,,,259297
+bug,usability,Updated the task banner (for Advanced Workflows) to use the document's display name rather than the database name. ,,,259954
+enhancement,security,Replaced the 3rd party component on the 'Set Document Type' button on Notifications and Reminders. ,,,261077
+bug,integration,Resolved an issue where large data sets could cause the Integration Agent to run out of memory. ,,,261468
