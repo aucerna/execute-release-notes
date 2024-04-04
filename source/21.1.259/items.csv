@@ -1,5 +1,5 @@
 type,tags,title,weight,detail,item#
-bug,administration,"When we rolled out the new configuration migration functionality, we inadvertently locked down several of our implementation tool loaders to only work for administrators with the configuration migration privilege.&nbsp; We have restored the original permissions. ",,,255269
+bug,administration,"When we rolled out the new configuration migration functionality, we inadvertently locked down several of our implementation tool loaders to only work for administrators with the configuration migration privilege. We have restored the original permissions. ",,,255269
 bug,integration,Resolved an issue where long-running (greater than 30 minutes) jobs using the Integration Agent would fail. ,,,258072
 enhancement,administration,"When building browse reports on Custom Tab configuration, administrators can now see the field's display name and not just the database column name. ",,,258791
 enhancement,security,Upgraded the 3rd party component used by the user permissions screen. ,,,259244
