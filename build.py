@@ -24,6 +24,8 @@ os.makedirs(OUTPUT_DIR)
 # read release data
 releases = []
 for release_id in os.listdir(SOURCE_DIR):
+    if release_id.startswith('.'):
+        continue
     release_path = os.path.join(SOURCE_DIR, release_id)
     summary_file = os.path.join(SOURCE_DIR, release_id, "summary.md")
     agent_file = os.path.join(SOURCE_DIR, release_id, "agent.txt")

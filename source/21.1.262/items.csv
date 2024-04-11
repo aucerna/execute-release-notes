@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+enhancement,system,Removed legacy option for GIT-managed plugin files. This was never actually turned on for customer environments.,,,258547
+enhancement,integration,Added support for publishing data to Quorum's DataHub.,,,267291
+bug,afe,Resolved issue where the AFE's release validation rule was being incorrectly invoked on Custom Document Actions. This prevented some plugins from working as expected. ,,,267702
+bug,Integration,Resolved an issue where the Integration Agent was unable to connect to HTTP/HTTPS services. ,,,267829
