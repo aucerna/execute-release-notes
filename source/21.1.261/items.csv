@@ -2,4 +2,4 @@ type,tags,title,weight,detail,item#
 enhancement,security,Removed legacy 3rd party component on the Job's Team Tab.,,,260180
 bug,integration,Resolved issue where the timezone in Document Synchronization plugin files was being ignored.,,,263907
 bug,integration,Resolved issue where custom tables exported to the SQL Warehouse / Azure SQL were empty.,,,266641
-note,,"This update fixes Document Synchronization plugins to respect the timezone configured in the plugin file.  Previosly, all dates were assumed to be in your server's local time.  This means that, upon upgrade, synchronized dates may change if the configured timezone in the plugin is not the same as the server's timezone. ",,,
+note,,"This update fixes Document Synchronization plugins to respect the timezone configured in the plugin file.  Previously, all dates were assumed to be in your server's local time.  This means that, upon upgrade, synchronized dates may change if the configured timezone in the plugin is not the same as the server's timezone. ",,,
