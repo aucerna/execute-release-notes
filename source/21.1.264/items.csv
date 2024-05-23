@@ -1,9 +1,9 @@
 type,tags,title,weight,detail,item#
 enhancement,security,Technical updates to the Job's (RTX) Partner tab. ,,,260186
 enhancement,integration,Improved error message when the Integration Agent connecting to Execute is the wrong version. ,,,262830
-enhancement,integration,The configuration migration tool now copies inactive views (which are often used for sub-views). ,,,265018
+enhancement,integration,The configuration migration tool now copies inactive custom tabs (which are often used for sub-views). ,,,265018
 bug,integration,Resolved issue where Export to QByte would fail when using the Integration Agent. ,,,267950
-bug,integration,"The Integration Agent Table Replicator ""Drop Table"" flag is now honored. This allows the Integration Agent to automatically drop and recreate the target table when changes happen. ",,,268182
+enhancement,integration,"Added a ""Drop Table"" flag to the Integration Agent Table Replicator configuration. This allows the Integration Agent to automatically drop and recreate the target table when changes happen. ",,,268182
 enhancement,integration,Added support for expression-based event filtering when using Enteprise Events for non-AFE document types. ,,,270877
 bug,admin,Resolved issue where configuration migration would fail to match accounts on Overhead Rules. ,,,271118
 bug,admin,"Improved output message when using the ""Test"" button on a Workflow Task's Hide Rule. ",,,271760
