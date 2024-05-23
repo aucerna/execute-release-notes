@@ -1,0 +1,2 @@
+type,tags,title,weight,detail,item#
+enhancement,workflow,"Deprecated functionality where workflows on parent documents could include/reference fields from child documents.  In practice, this functionality was unlikely to be used since it could only work in very specific cases.  On startup, however, Execute will check for references of this type and, if encountered, will prevent the system from starting up.  If this happens, revert to Execute 21.1.264 and contact Execute Support.",,refs,248415
