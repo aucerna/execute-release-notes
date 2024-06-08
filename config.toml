@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://updates.aucerna.app/execute/21/"
 languageCode = "en-us"
 title = "Quorum Execute Release Notes"
 disableKinds = ["taxonomy", "term"]
