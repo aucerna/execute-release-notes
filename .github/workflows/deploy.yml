@@ -24,7 +24,7 @@ jobs:
       - name: NPM
         run: npm install
       - name: Build
-        run: hugo
+        run: hugo -b https://www.deliveryraptor.net/notes/
         env:
           HUGO_SHOW_DEVOPS_LINKS: true
       - name: Create SSH key
