@@ -1,2 +1,4 @@
 venv
 public
+node_modules
+resources/_gen

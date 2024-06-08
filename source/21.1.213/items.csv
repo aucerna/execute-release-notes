@@ -1,2 +1,0 @@
-type,tags,title,weight,detail,item#
-bug,integration,Resolved issue where "Reverse Table Replicator" would run out of memory on large tables.,,,166345

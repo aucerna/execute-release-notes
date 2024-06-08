@@ -1,0 +1,94 @@
+{{ if .Items }}
+<div 
+  x-data="{
+        hasVisibleItems: false,
+        checkVisibility() {
+          setTimeout( () =>  {
+            this.hasVisibleItems = Array.from(this.$refs.list.children).some(item => item.style.display !== 'none');
+          },100);
+        }
+    }" 
+  x-init="
+    checkVisibility();
+    $watch('search', (t) => { checkVisibility(); });
+  "
+  x-show="hasVisibleItems"
+  class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow mb-10"
+  >
+<div class="px-4 py-5 sm:px-6 bg-gray-100">
+  <h2 class="font-extrabold text-smallcaps flex">
+  {{ partial "icon" (dict "Type" .Type) }}
+  <span class="ml-2">{{.Title}}</span>
+  </h2>
+</div>
+<div class="p-4 prose prose-sm w-full max-w-full">
+<ul x-ref="list">
+  {{ range $item := .Items }}
+  {{ $content := "" }}
+  {{ $content = print $content " " ($item.Title | lower) }}
+  {{ $content = print $content " " ($item.DetailRaw | lower) }}
+  {{ if $item.Item }}
+    {{ $content = print $content " " "#" ($item.Item | lower) }}
+  {{ end }}
+  {{ if $item.Tags }}
+    {{ range $tag := (split $item.Tags ",") }}
+      {{ $content = print $content " " "#" ($tag | lower) }}
+    {{ end }}
+  {{ end }}
+
+  <li 
+    x-data="{ 
+      expanded: false,
+      detail: {{ $item.DetailRaw | lower | jsonify }},
+      content: {{ $content | jsonify }} 
+    }" 
+    x-show="!search || content.includes(search.toLowerCase())">
+
+  {{$item.Title}}
+
+  {{ if $item.Tags }}
+    {{ range $tag := (split $item.Tags ",") }}
+      {{ $tag := print "#" (lower $tag) }}
+      {{ if eq $tag "security" }}
+        <span class="inline-flex items-center rounded-md bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">{{$tag}}</span>
+      {{ else if eq $tag "integration" }}
+        <span class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10">{{$tag}}</span>
+      {{ else }}
+        <span class="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30">{{$tag}}</span>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{if $.ShowVersion }}
+    <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{{$item.Version}}</span>
+  {{end}}
+
+  {{if $item.Item }}
+    {{ $showLinks := eq "true" (getenv "HUGO_SHOW_DEVOPS_LINKS") }}
+    {{ if $showLinks }} <a href="https://dev.azure.com/Aucerna/Aucerna/_workitems/edit/{{ $item.Item }}"> {{ end }}
+    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+      #{{$item.Item}}
+    </span>
+    {{ if $showLinks }} </a> {{ end }}
+  {{end}}
+
+  {{ if $item.DetailBody }}
+  <br/>
+  <button type="button" x-show="expanded" @click="expanded = !expanded" style="display: none" class="rounded bg-indigo-800 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Hide Details</button>
+  <button type="button" x-show="!expanded" @click="expanded = !expanded" class="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Show Details</button>
+  {{ end }}
+
+  {{ if $item.DetailBody }}
+  <div class="text-xs overflow-hidden rounded-lg bg-white shadow mt-2" x-show="expanded || (search && (detail || '').includes(search.toLowerCase()))">
+  <div class="px-8 py-4">
+  {{ $item.DetailBody }}
+  </div>
+  </div>
+  {{ end }}
+
+  </li>
+  {{ end }}
+</ul>
+</div>
+</div>
+{{ end }}

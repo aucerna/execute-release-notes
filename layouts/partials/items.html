@@ -1,0 +1,10 @@
+{{/* 
+Return a flattened list of all items across all versions
+*/}}
+
+{{ $all := slice }}
+{{ range $version := partialCached "versions" . }}
+    {{ $all = $all | append $version.Items }}
+{{ end }}
+
+{{ return $all }}

@@ -1,0 +1,35 @@
+{{ if .Items }}
+
+{{/* This describes known/supported item types and the sections they fall under.  */}}
+{{/* Any type not listed here will be shown under "Other" */}}
+{{/* In addition, icons can be configured in icon.html */}}
+{{ $sections := slice 
+    (dict "Title" "Notes" "Type" "note")
+    (dict "Title" "Schema Changes" "Type" "schema")
+    (dict "Title" "Features️" "Type" "feature")
+    (dict "Title" "Enhancements" "Type" "enhancement")
+    (dict "Title" "Bugs" "Type" "bug")
+}}
+
+{{ $supportedTypes := slice }}
+{{ range $section := $sections }}
+    {{ $supportedTypes = $supportedTypes | append $section.Type }}
+{{ end }}
+
+{{ range $section := $sections }}
+    {{partial "section" (dict 
+        "Title" $section.Title
+        "Type" $section.Type
+        "ShowVersion" $.ShowVersion
+        "Items" (where $.Items "Type" "eq" $section.Type)
+    )}}
+{{ end }}
+
+{{partial "section" (dict 
+    "Title" "Other" 
+    "ShowVersion" $.ShowVersion
+    "Items" (where $.Items "Type" "not in" $supportedTypes)
+)}}
+{{ else }}
+    <p>Nothing to see here</p>
+{{ end }}

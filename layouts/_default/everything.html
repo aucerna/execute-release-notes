@@ -1,0 +1,14 @@
+{{ define "title"}}
+All {{.Site.Params.ProductName}} changes
+{{end}}
+
+{{ define "main" }}
+
+{{ $all := partialCached  "items" .}}
+
+{{ partial "sections" (dict 
+    "ShowVersion" true
+    "Items" $all
+)}}
+
+{{end}}

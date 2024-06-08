@@ -1,3 +1,0 @@
-The new Bulk Forecast update utility makes it easier to update capital forecasts across many projects via. Excel.  It will extract current forecast data (for a user-specified date range and set of projects) and export that to Excel as a starting point for the update. The user can then see the current forecast, quickly make bulk updates across many projects in Excel, and then re-upload those changes into Aucerna Execute.
-
-![Excel](forecast.png)

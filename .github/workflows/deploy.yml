@@ -14,10 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install Python Dependencies
-        run: pip install -r requirements.txt 
+      - name: Node setup
+        uses: actions/setup-node@v4
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.6.0
+        with:
+            hugo-version: latest # optional, default is latest
+            extended: true # optional, default is false
+      - name: NPM
+        run: npm install
       - name: Build
-        run: python build.py
+        run: hugo
+        env:
+          HUGO_SHOW_DEVOPS_LINKS: true
       - name: Create SSH key
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa

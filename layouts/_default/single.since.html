@@ -1,0 +1,19 @@
+{{ define "title"}}
+Changes since {{.Site.Params.ProductName}} {{ (partial "version" .) }}
+{{end}}
+
+{{ define "main" }}
+
+{{ $all := partialCached  "items" .}}
+{{ $items := where $all "Date" "gt" .Date }}
+
+{{ partial "sections" (dict 
+    "ShowVersion" true
+    "Items" $items
+)}}
+
+{{end}}
+
+{{ define "footer" }}
+  {{ partial "installation_footer" }}
+{{ end }}

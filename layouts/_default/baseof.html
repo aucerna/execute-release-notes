@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head class="h-full bg-gray-100">
+    <meta charset="utf-8" />
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+   
+    {{ $time := now }}
+    {{ $styles := resources.Get "css/styles.scss"
+        | toCSS
+        | postCSS (dict "config" "./assets/css/postcss.config.js")
+        | resources.ExecuteAsTemplate "styles.css" $time
+    }}
+
+    {{ if hugo.IsServer }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{ else }}
+        {{ $styles := $styles | minify | fingerprint | resources.PostCSS }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{ end }}
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.0/dist/cdn.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.0/cdn.min.js" integrity="sha512-4e/5PZ1eoLJMDjaJXTHkWRA0yec8bm07/iINYSd5rdJ38jGm5OZkEi3J+7LqSDWNATNJ4/aneNlrk2AYnnckIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-sql.min.js" integrity="sha512-fmx2W52F+6sZ8IYcsuKsFV0PjADeu32K3PdJGhxCKB+5VRVXpmuKgkfzTsW/B8cy/FPnEOlZX4fP/ZQk057tPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js" integrity="sha512-yvw5BDA/GQu8umskpIOBhX2pDLrdOiriaK4kVxtD28QEGLV5rscmCfDjkrx52tIgzLgwzs1FsALV6eYDpGnEkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body 
+    class="h-full" 
+    x-data="{ search: ''}" 
+    x-init="
+      search = decodeURIComponent(window.location.hash.substring(1) || '');
+      $watch('search', (value) => { 
+        history.replaceState(null, null, value ? ('#' + value) : ' ')
+      });
+    ">
+    <div class="min-h-full">
+      <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex items-center">
+
+              <div class="flex-shrink-0">
+                <a class="text-gray-200" href="{{ .Site.BaseURL }}"
+                  >{{ .Site.Title }}</a
+                >
+              </div>
+
+              <div>
+                <div class="ml-10 flex-1 items-baseline space-x-4">
+                  <!-- <a href="{{ .Site.BaseURL }}" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Index</a> -->
+                  <a href="{{ .Site.BaseURL }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Index</a>
+                  <a href="{{ .Site.BaseURL }}everything/" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">All Changes</a>
+                </div>
+              </div>
+
+            </div>
+
+            {{ if not .Page.Params.suppress_search }}
+            <div class="ml-auto">
+              <div class="justify-center px-2  lg:justify-end hidden md:block">
+                <div class="w-full max-w-lg lg:max-w-xs">
+                  <label for="search" class="sr-only">Search</label>
+                  <div class="relative text-gray-400 focus-within:text-gray-600">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                      <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <input id="search" x-model="search" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:text-sm sm:leading-6" placeholder="Search" type="search" name="search">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+
+          </div>
+        </div>
+      </nav>
+
+      <header class="bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+            {{ block "title" .}}{{end}}
+          </h1>
+        </div>
+      </header>
+
+      <div class="rounded-md bg-yellow-50 p-4" style="display: none" x-show="!!search">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h3 class="text-sm font-medium text-yellow-800">Filtered Results</h3>
+            <div class="mt-2 text-sm text-yellow-700">
+              <p>The results you are seeing have been filtered to show only items containing '<b x-text="search"></b>'.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <div class="mx-auto max-w-full w-full py-6 sm:px-6 lg:px-8">
+          {{ block "main" . }} {{ end }}
+        </div>
+      </main>
+    </div>
+
+    <!-- Code that all your templates share, like a header -->
+    {{ block "footer" . }}
+    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+    {{ end }}
+  </body>
+</html>
