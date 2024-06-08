@@ -3,7 +3,8 @@
   <head class="h-full bg-gray-100">
     <meta charset="utf-8" />
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {{ $time := now }}
     {{ $styles := resources.Get "css/styles.scss"
         | toCSS
