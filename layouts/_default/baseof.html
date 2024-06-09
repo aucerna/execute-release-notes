@@ -47,10 +47,15 @@
               </div>
 
               <div>
-                <div class="ml-10 flex-1 items-baseline space-x-4">
-                  <!-- <a href="{{ .Site.BaseURL }}" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Index</a> -->
-                  <a href="{{ .Site.BaseURL }}" class="hidden md:inline text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Index</a>
-                  <a href="{{ .Site.BaseURL }}everything/" class="hidden md:inline text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">All Changes</a>
+                <div class="hidden md:block ml-10 flex-1 items-baseline space-x-4">
+                  {{ $currentPage := . }}
+                  {{ range .Site.Menus.main }}
+                    {{ if or (eq .URL $.Permalink) (eq .URL $.RelPermalink)}}
+                      <a href="{{ .URL }}" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{{ .Name }}</a> 
+                    {{ else }}
+                      <a href="{{ .URL }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">{{ .Name }}</a>
+                    {{ end }}
+                  {{ end }}
                 </div>
               </div>
 

@@ -15,4 +15,14 @@ productName = "Execute"
 [outputs]
   home = ["HTML"]
   page = ["HTML", "since"]
-  
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Everything"
+    url = "/everything/"
+    weight = 2 
