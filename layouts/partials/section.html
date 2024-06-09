@@ -15,13 +15,13 @@
   x-show="hasVisibleItems"
   class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow mb-10"
   >
-<div class="px-4 py-5 sm:px-6 bg-gray-100">
+<div class="px-2 py-2 md:px-4 md:py-5 bg-gray-100">
   <h2 class="font-extrabold text-smallcaps flex">
   {{ partial "icon" (dict "Type" .Type) }}
   <span class="ml-2">{{.Title}}</span>
   </h2>
 </div>
-<div class="p-4 prose prose-sm w-full max-w-full">
+<div class="p-4 prose text-xs prose-sm md:text-sm w-full max-w-full">
 <ul x-ref="list">
   {{ range $item := .Items }}
   {{ $content := "" }}
