@@ -39,10 +39,19 @@
   <li 
     x-data="{ 
       expanded: false,
+      show: true,
       detail: {{ $item.DetailRaw | lower | jsonify }},
       content: {{ $content | jsonify }} 
     }" 
-    x-show="!search || content.includes(search.toLowerCase())">
+    x-init="
+    expanded = search && (detail || '').includes(search.toLowerCase());
+    show = !search || content.includes(search.toLowerCase());
+    $watch('search', (search) => {
+      expanded = search && (detail || '').includes(search.toLowerCase());
+      show = !search || content.includes(search.toLowerCase());
+    });
+    "
+    x-show="show">
 
   {{$item.Title}}
 
@@ -79,7 +88,7 @@
   {{ end }}
 
   {{ if $item.DetailBody }}
-  <div class="text-xs overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded || (search && (detail || '').includes(search.toLowerCase()))">
+  <div class="text-xs overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded">
   <div class="px-8 py-4">
   {{ $item.DetailBody }}
   </div>
