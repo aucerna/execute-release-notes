@@ -23,6 +23,6 @@ productName = "Execute"
     weight = 1
 
   [[menu.main]]
-    name = "Everything"
+    name = "All Changes"
     url = "/everything/"
     weight = 2 
