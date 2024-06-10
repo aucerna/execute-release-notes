@@ -20,7 +20,7 @@
 
   <tbody>
   {{ range $i, $item := partialCached "versions" . }}
-  <tr>
+  <tr class="even:bg-gray-100">
       <td>
       <a href="{{$item.Link}}" class="hidden md:block">{{$item.Title}}</a>
       <a href="{{$item.Link}}" class="md:hidden">{{$item.Version}}</a>
