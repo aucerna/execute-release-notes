@@ -1,8 +1,12 @@
 {{ define "title"}}
-All {{.Site.Params.ProductName}} changes
+{{.Title}}
 {{end}}
 
 {{ define "main" }}
+
+<div class="prose prose-sm max-w-none pb-4">
+    {{.Content}} 
+  </div>
 
 {{ $all := partialCached  "items" .}}
 
