@@ -41,9 +41,13 @@
             <div class="flex items-center">
 
               <div class="flex-shrink-0">
-                <a class="text-gray-200" href="{{ .Site.BaseURL }}"
-                  >{{ .Site.Title }}</a
-                >
+                <a class="text-gray-200" href="{{ .Site.BaseURL }}">
+                  {{ if fileExists "static/logo.png" }}
+                  <img class="h-10 w-auto" src="{{ .Site.BaseURL }}logo.png" alt="{{ .Site.Title }}">
+                  {{ else }}
+                  {{ .Site.Title }}
+                  {{ end}}
+                </a>
               </div>
 
               <div>
