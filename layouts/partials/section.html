@@ -88,7 +88,7 @@
   {{ end }}
 
   {{ if $item.DetailBody }}
-  <div class="text-xs overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded">
+  <div class="text-xs overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded" x-cloak>
   <div class="px-8 py-4">
   {{ $item.DetailBody }}
   </div>
