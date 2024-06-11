@@ -3,7 +3,7 @@ Return a flattened list of all items across all versions
 */}}
 
 {{ $all := slice }}
-{{ range $version := partialCached "versions" . }}
+{{ range $version := partial "versions" . }}
     {{ $all = $all | append $version.Items }}
 {{ end }}
 

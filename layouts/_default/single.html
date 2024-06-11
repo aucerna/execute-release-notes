@@ -4,7 +4,7 @@ Changes in {{.Site.Params.ProductName}} {{ (partial "version" .) }}
 
 {{ define "main" }}
 
-{{ $all := partialCached  "items" .}}
+{{ $all := partial  "items" .}}
 {{ $items := where $all "Version" "eq" (partial "version" .) }}
 
 {{ partial "sections" (dict 

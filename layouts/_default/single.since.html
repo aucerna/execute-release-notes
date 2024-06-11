@@ -4,7 +4,7 @@ Changes since {{.Site.Params.ProductName}} {{ (partial "version" .) }}
 
 {{ define "main" }}
 
-{{ $all := partialCached  "items" .}}
+{{ $all := partial  "items" .}}
 {{ $items := where $all "Date" "gt" .Date }}
 
 {{ partial "sections" (dict 
