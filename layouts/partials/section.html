@@ -32,11 +32,14 @@
   {{ end }}
   {{ if $item.Tags }}
     {{ range $tag := (split $item.Tags ",") }}
-      {{ $content = print $content " " "#" ($tag | lower) }}
+      {{ $content = print $content " " "#" (strings.Trim ($tag | lower) " ") }}
     {{ end }}
   {{ end }}
 
   <li 
+    {{ if in (split $item.Tags ",") "important" }}
+    class="bg-red-100 pt-1 pl-2 pr-2 pb-2"
+    {{ end }}
     x-data="{ 
       expanded: false,
       show: true,
@@ -57,14 +60,7 @@
 
   {{ if $item.Tags }}
     {{ range $tag := (split $item.Tags ",") }}
-      {{ $tag := print "#" (lower $tag) }}
-      {{ if eq $tag "security" }}
-        <span class="inline-flex items-center rounded-md bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">{{$tag}}</span>
-      {{ else if eq $tag "integration" }}
-        <span class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10">{{$tag}}</span>
-      {{ else }}
-        <span class="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30">{{$tag}}</span>
-      {{ end }}
+      {{partial "tags" (dict "Tag" $tag "Item" $item) }}
     {{ end }}
   {{ end }}
 

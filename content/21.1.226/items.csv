@@ -1,4 +1,4 @@
 type,tags,title,weight,detail,item#
 bug,integration,Improvements to the behaviour of Table Data Selector filter fields to make them more consistent with other data selectors.,,,210645
 bug,system,"Resolved issue where menu-items were unreadable when using the ""Default"" theme with the ""More Contrast"" option.",,,227839
-bug,welldelivery,Resolved issue where the buttons to uncomplete a discipline were hidden.,,,229889
+bug,well delivery,Resolved issue where the buttons to uncomplete a discipline were hidden.,,,229889

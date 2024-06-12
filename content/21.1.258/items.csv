@@ -1,4 +1,4 @@
 type,tags,title,weight,detail,item#
-bug,administration,Resolved minor issue where the suggested filename for Job (RTx) position rule data loaders was incorrect. ,,,259353
+bug,admin,Resolved minor issue where the suggested filename for Job (RTx) position rule data loaders was incorrect. ,,,259353
 enhancement,integration,Brand new API-based real-time export of approved AFEs from Execute into Quorum On Demand Accounting. ,,,260257
 enhancement,integration," Improved handling of minor account number formatting differences between On Demand Well Ops (WellEz) and Execute.  For example, Execute having  ""100 / 01 "" while ODW is configured with  ""100.01 "" will no longer cause an issue when exporting AFEs and importing field estimates.",,,260479

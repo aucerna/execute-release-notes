@@ -3,7 +3,7 @@ enhancement,"system,security",New system for managing sensitive credentials in E
 enhancement,workflow,"Authorized users can now reset/reactivate workflow tasks, causing parts of the workflow to be re-run. ",900,wf,158680
 enhancement,"system,security","Now that Execute is part of the Quorum family, we thought it was a good time to tweak things a bit.  The product formerly known as ""Quorum Execute"" is now ""Quorum Execute"" or ""Execute"" for short.  The application icons, logos, and branding have been updated accordingly. ",,,159350
 enhancement,"opsched,enersight","To help keep things tidy, we've added an option to remove schedule activities that are no longer in your Enersight import dataset.",800,,161131
-enhancement,"welldelivery,wellez","If you use OnDemand Well Operations (WellEz) and have AFEs that contain costs that apply to multiple jobs (such as a D&C AFE), we have good news!  We've added support for pushing multi-job AFEs into WellEz. ",800,,162398
+enhancement,"well delivery,wellez","If you use OnDemand Well Operations (WellEz) and have AFEs that contain costs that apply to multiple jobs (such as a D&C AFE), we have good news!  We've added support for pushing multi-job AFEs into WellEz. ",800,,162398
 enhancement,"workflow,afe",Workflows created against AFEs are now AFE-version specific and will reset when revisions/supplements are made. ,,,163281
 enhancement,system,Adjusted browser caching from 24 hours to 15 minutes to avoid issues that pop up after upgrading Execute versions. ,,,165822
 enhancement,system,Support m-files:// links to the M-Files document management system ,,,166537

@@ -1,19 +1,19 @@
 type,tags,title,weight,detail,item#
 enhancement,system,New Document Link Formula Functions (covering all of our field types),800,formulas,158844
 enhancement,system,Automated Document Linking,1000,links,158871
-enhancement,welldelivery,Automatically generated Well and Site numbers,700,,157849
+enhancement,well delivery,Automatically generated Well and Site numbers,700,,157849
 enhancement,workflow,Ability to copy workflow definitions,5,,156771
 bug,system,Fixed issue where filter fields on Data Table Selector were not being honoured.  ,,,158765
 bug,system,Fixed default sorting on the new-style grids.  They new sort on first column like the used to.,,,157020
-bug,welldelivery,Fixed bug where a Site's Well List would fail to load if there was an inactive field specified in the Well's identifying fields.,,,158746
+bug,well delivery,Fixed bug where a Site's Well List would fail to load if there was an inactive field specified in the Well's identifying fields.,,,158746
 enhancement,budget,"New ""Is Actual"", ""AFE Gross Actuals"" and ""AFE Net Actuals"" columns added to Monthly Project Capital report type.",,,157846
 enhancement,budget,Projects can now be copied.,5,,158145
 enhancement,system,Made Enersight timeout configurable to better handle integration with larger projects,,,158410
 enhancement,afe,"Button to copy details from linked Wells, Sites and Jobs onto an AFE",900,pull,158900
 enhancement,afe,"AFE Number field on Dashboard now displayed as ""AFE Number"" instead of ""Value""",,,158901
 bug,system,Fixed issue where bulk update of document flags from the browse screen could leave document locked,,,159355
-bug,scheduling,"Fixed issue where import from Enersight would fail when project referenced capital class contained upper-case characters (i.e. unallocatedProvision, ownerCosts, …)",,,159038
+bug,opsched,"Fixed issue where import from Enersight would fail when project referenced capital class contained upper-case characters (i.e. unallocatedProvision, ownerCosts, ï¿½)",,,159038
 bug,system,Fixed issue where Document Sync would fail on non-AFE custom columns.,,,158299
 bug,afe,Fixed issue where removing an account from the system would fail if it was referrenced by a hidden (according to view rights) AFE.,,,154748
-enhancement,scheduling,Added drag-and-drop mode that automatically moves all related activities that aren't assigned a resource.,,,111424
-bug,welldelivery,Fixed issues where an error in a workflow task rule would cause the rule to become uneditable.,,,158675
+enhancement,opsched,Added drag-and-drop mode that automatically moves all related activities that aren't assigned a resource.,,,111424
+bug,well delivery,Fixed issues where an error in a workflow task rule would cause the rule to become uneditable.,,,158675

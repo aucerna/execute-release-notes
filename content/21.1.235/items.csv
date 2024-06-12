@@ -1,10 +1,10 @@
 type,tags,title,weight,detail,item#
-enhancement,usability,Improvements to keyboard-based tabbing between fields in grids. ,,,233113
+enhancement,ui,Improvements to keyboard-based tabbing between fields in grids. ,,,233113
 bug,opsched,Resolved issue where the Export to Excel button would fail on the Operational Schedule's Activities tab. ,,,233653
-enhancement,"system,formulas",Added many additional formula functions to make it easier to extract and use data in custom tables.,,table,234266
+enhancement,"system,formula",Added many additional formula functions to make it easier to extract and use data in custom tables.,,table,234266
 bug,security,Improved session handling when viewing maps to get rid of potential security issue. ,,,234902
-enhancement,usability,Multiple behaviour improvements to drop-down lists in grids. ,,,235035
+enhancement,ui,Multiple behaviour improvements to drop-down lists in grids. ,,,235035
 bug,security,"Upgraded 3rd party component ""jQueryUI"" to resolve potential security risks in the version Execute was using. ",,,235198
-bug,"reporting,usability",Fixed issue where building reports with multiple filters on the same column would fail. ,,,235331
+bug,"reporting,ui",Fixed issue where building reports with multiple filters on the same column would fail. ,,,235331
 bug,workflow,Fixed issue where Workflow Task pop-up would not handle Unzoned Date fields correctly. ,,,236341
 bug,system,Resolved minor case-sensitivity issue for attachments in Unix-based Execute environments. ,,,236506

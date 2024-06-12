@@ -5,7 +5,7 @@ bug,system,Search for a DocumentID in the browse page now works.,,,155636
 enhancement,afe,"Multiple Enhancements to integration with WellEz, and import of field estimates.",,,154540
 enhancement,system,"Authorized users are now able to create Document Links between all ""Primary"" document types.",,,157309
 enhancement,workflow,"New functionality to allow a User to ""Take Ownership"" of a task if the share a User Group with the task's owner.",,take,157112
-enhancement,welldelivery,Wells and Sites can now be copied,,,158142
-enhancement,welldelivery,"Support for field mapping to copy data from Well/Site to Job, when creating a new Job.",,,158138
+enhancement,well delivery,Wells and Sites can now be copied,,,158142
+enhancement,well delivery,"Support for field mapping to copy data from Well/Site to Job, when creating a new Job.",,,158138
 bug,admin,Fixed issue where Reassign tool wouldn't show Workflow tasks correctly.,,,157305
 enhancement,integration,Support for Database Document Export (Qbyte and Envision) from the Integration Agent (for SaaS deployments of Execute),,,

@@ -1,5 +1,5 @@
 type,tags,title,weight,detail,item#
-feature,administration,"If you've ever found yourself wondering ""just where is this field used"" or ""is this field safe to remove"", we think you'll like our new functionality that helps you answer those very questions.  The new ""References"" tab on a field's configuration screen shows you the rules, tabs, reports, etc. that make use of that field.",,,257716
-bug,loaders,The data loaders exported by the configuration migration tool are now sorted by name to make it easy to navigate the individual files and compare with other loaders.,,,259967
+feature,admin,"If you've ever found yourself wondering ""just where is this field used"" or ""is this field safe to remove"", we think you'll like our new functionality that helps you answer those very questions.  The new ""References"" tab on a field's configuration screen shows you the rules, tabs, reports, etc. that make use of that field.",,,257716
+bug,loader,The data loaders exported by the configuration migration tool are now sorted by name to make it easy to navigate the individual files and compare with other loaders.,,,259967
 enhancement,security,Replaced the legacy component used on the Job's Approval tab.,,,260183
-bug,loaders,"Resolved issue where long-running configuration migrations could fail because the system was ""helpfully"" cleaning up temporary files prior to them being processed.",,,260261
+bug,loader,"Resolved issue where long-running configuration migrations could fail because the system was ""helpfully"" cleaning up temporary files prior to them being processed.",,,260261

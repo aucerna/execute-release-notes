@@ -1,5 +1,5 @@
 type,tags,title,weight,detail,item#
-feature,"beta,integration",Execute now includes beta support for publishing a reporting schema to Snowflake or SQL Server/AzureSQL,1,warehouse,236172
+feature,"integration",Execute now includes beta support for publishing a reporting schema to Snowflake or SQL Server/AzureSQL,1,warehouse,236172
 feature,admin,Administrators can now blissfully manage plugins from within Execute,2,plugins,180679
 enhancement,"admin,workflow","Administrators with the ""Can Delete Top-level Workflow Instances"" privilege can now delete a workflow instance that is no longer needed, or was created in error, using ""More > Delete Workflow Instance"" while viewing the workflow instance.",,,178841
 enhancement,workflow,"Emailed workflow task links now point to the appropriate root document (Well, Job, AFE, etc.) instead of the Workflow Instance",,,235449

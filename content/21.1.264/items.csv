@@ -8,4 +8,4 @@ enhancement,integration,Added support for expression-based event filtering when 
 bug,admin,Resolved issue where configuration migration would fail to match accounts on Overhead Rules. ,,,271118
 bug,admin,"Improved output message when using the ""Test"" button on a Workflow Task's Hide Rule. ",,,271760
 bug,reporting,Resolved issue preventing the legacy reporting tool from connecting to Execute. ,,,272493
-bug,"rtx,welldelivery",Resolved issue where choosing a contributor on a Job's Team-tab would fail if the User Identifying Columns were modified from the default. ,,,273009
+bug,"well delivery",Resolved issue where choosing a contributor on a Job's Team-tab would fail if the User Identifying Columns were modified from the default. ,,,273009

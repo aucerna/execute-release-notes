@@ -1,5 +1,5 @@
 type,tags,title,weight,detail,item#
-feature,"system,user",Users can now update values and entire columns directly from Execute's browse screens.,,bulk,258593
+feature,"system,ui",Users can now update values and entire columns directly from Execute's browse screens.,,bulk,258593
 enhancement,integration,Added the ability to import actuals from a CSV file located on a remote SFTP server. ,,,267410
 enhancement,integration,Added 'filename' as an option when building expressions in Dynamic Docs and SharePoint configurations.  ,,,267534
 bug,Integration,"Fixed the issue where the 'Extension' property when publishing Execute event data to a remote SFTP server was ignored.  This meant that all the newly created files were given no extension, instead of whatever was configured. ",,,268098

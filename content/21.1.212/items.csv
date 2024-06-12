@@ -1,6 +1,6 @@
 type,tags,title,weight,detail,item#
-enhancement,"backend, saas",Technical improvements to Execute to allow it to be efficiently containerized using Docker.  This will simplify and improve the management of Quorum hosted Execute environments.  It does not affect on-prem Execute installations. ,,,151575
-enhancement,"backend, saas",Improvements to management of configuration files and plugins in Quorum-hosted Execute environments.  This should vastly reduce turn around time for changes to plugins. ,,,154672
+enhancement,"system, saas",Technical improvements to Execute to allow it to be efficiently containerized using Docker.  This will simplify and improve the management of Quorum hosted Execute environments.  It does not affect on-prem Execute installations. ,,,151575
+enhancement,"system, saas",Improvements to management of configuration files and plugins in Quorum-hosted Execute environments.  This should vastly reduce turn around time for changes to plugins. ,,,154672
 enhancement,"enersight,opsched","When pushing a schedule to Enersight, capital is only pushed across for static activities (avoiding unnecessary errors). ",,,156073
 bug,opsched,Resolved issue where the Operational Scheduling view editor would sometimes break (and remove) milestone configuration. ,,,156813
 feature,integration,"Added support for ODBC in Data Selection, Data Synchronization and Table Replication (Integration Agent).  This means that these types of integrations are no longer limited to either Oracle or SQL Server, but can now work against most data providers that have an ODBC driver (such as Snowflake, Excel, Access, ...). ",,,157945
