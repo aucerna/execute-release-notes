@@ -1,5 +1,4 @@
 ---
-title: Quorum Execute 21.1.234
 date: 2023-04-06
 ---
 

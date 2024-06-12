@@ -133,14 +133,13 @@
 
       <main class="px-4">
         <div class="mx-auto max-w-7xl w-full py-6 md:px-6">
-          {{ block "main" . }} {{ end }}
+          {{ block "main" . }}
+          {{ end }}
         </div>
       </main>
     </div>
 
-    <!-- Code that all your templates share, like a header -->
     {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
     {{ end }}
   </body>
 </html>

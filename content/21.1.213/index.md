@@ -1,5 +1,4 @@
 ---
-title: Quorum Execute 21.1.213
 date: 2022-07-26
 ---
  

@@ -19,10 +19,16 @@
   </thead>
 
   <tbody>
-  {{ range $i, $item := partial "versions" . }}
+  {{ range $i, $item := (partial "get_all_versions" .) }}
   <tr class="even:bg-gray-100">
       <td>
-      <a href="{{$item.Link}}" class="hidden md:block">{{$item.Title}}</a>
+      <a href="{{$item.Link}}" class="hidden md:block">
+        {{ if $item.Title }}
+          {{ $item.Title }}
+        {{ else }} 
+         {{site.Params.ProductName}} {{$item.Version}}
+        {{ end }}
+      </a>
       <a href="{{$item.Link}}" class="md:hidden">{{$item.Version}}</a>
       </td>
       <td>{{time.Format "January 2, 2006" $item.Date}}</td>

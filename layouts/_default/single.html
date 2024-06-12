@@ -1,15 +1,19 @@
 {{ define "title"}}
-Changes in {{.Site.Params.ProductName}} {{ (partial "version" .) }}
+Changes in 
+  {{ if .Title }}
+    {{ .Title }}
+  {{ else }} 
+    {{.Site.Params.ProductName}} {{ (partial "get_version_for_page" .) }}
+  {{end}}
 {{end}}
 
 {{ define "main" }}
 
-{{ $all := partial  "items" .}}
-{{ $items := where $all "Version" "eq" (partial "version" .) }}
+{{ $detail := partial  "get_version" . }}
 
 {{ partial "sections" (dict 
     "ShowVersion" false 
-    "Items" $items
+    "Items" $detail.Items
 ) }}
 
 {{end}}

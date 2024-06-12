@@ -1,7 +1,7 @@
 {{ if .Items }}
 <div 
   x-data="{
-        hasVisibleItems: false,
+        hasVisibleItems: true,
         checkVisibility() {
           setTimeout( () =>  {
             this.hasVisibleItems = Array.from(this.$refs.list.children).some(item => item.style.display !== 'none');

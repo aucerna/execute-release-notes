@@ -1,5 +1,4 @@
 ---
-title: Quorum Execute 21.0
 date: 2021-12-15
 ---
 

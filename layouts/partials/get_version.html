@@ -1,0 +1,54 @@
+{{ $page := .Page }}
+
+{{ $base := $page.File.Dir }}
+
+{{/* Get the version number from the Folder */}}
+{{ $version := (path.Base .File.Dir) }}
+
+{{ if eq ($page.Resources.Get "items.csv") nil }}
+  {{ errorf "Unable to process %s because items.csv is missing" $version }}
+{{ end }}
+
+{{/* Process the CSV file.  If this fails, adding some logging on csvFileName is helpful */}}
+{{ $items := (transform.Unmarshal ($page.Resources.Get "items.csv")) }}
+
+{{ $header := index $items 0 }}
+
+{{ $processed := slice }} 
+{{ range $row := after 1 $items }}
+    {{ $d := dict }}
+    {{/* Convert CSV row to dict using CSV header vaues (title cased!) */}}
+    {{ range $i, $v := $header }}
+        {{ if eq $v "item#"}}{{$v = "item"}}{{end}} 
+        {{ $d = $d | merge (dict (title $v) (index $row $i)) }}
+    {{ end }}
+    {{/* Process detail values */}}
+    {{ if $d.Detail}}
+        {{ $detailFile := path.Join $base $d.Detail "summary.md" }}
+        {{ if fileExists $detailFile }}
+            {{ $detailContent := readFile $detailFile }}
+            {{/* Convert relative image references to absolute references */}}
+            {{ $detailContent = (replaceRE 
+                `!\[(.*?)\]\((.*)\)` 
+                (print `![$1](`  $page.RelPermalink $d.Detail  `/$2)`) 
+                $detailContent) }}
+            {{/* Convert detail to HTML */}}
+            {{ $d = $d | merge (dict "DetailRaw" $detailContent) }}
+            {{ $d = $d | merge (dict "DetailBody" (markdownify $detailContent)) }}
+        {{ else }}
+            {{ warnf "Detail file missing: %s" $detailFile }}
+        {{end}}      
+    {{ end }}
+    {{ $d = $d | merge (dict "Version" $version) }}
+    {{ $d = $d | merge (dict "Date" $page.Date) }}
+    {{ $processed = $processed | append $d }}
+{{ end }} 
+
+{{ return (dict 
+    "Version" $version
+    "Items" $processed
+    "Date" $page.Date
+    "Title" $page.Title
+    "HasSchemaChanges" (gt (len (where $processed ".Type" "eq" "schema")) 0)
+    "Link" $page.RelPermalink
+)}}

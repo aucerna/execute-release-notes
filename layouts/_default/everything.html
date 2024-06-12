@@ -8,11 +8,15 @@
     {{.Content}} 
   </div>
 
-{{ $all := partial  "items" .}}
+{{ $all := (partial "get_all_versions" .) }}
+{{ $items := slice }}
+{{ range $v := $all }}  
+  {{ $items = $items | append $v.Items }}
+{{ end }}
 
 {{ partial "sections" (dict 
     "ShowVersion" true
-    "Items" $all
+    "Items" $items
 )}}
 
 {{end}}

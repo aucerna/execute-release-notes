@@ -1,5 +1,4 @@
 ---
-title: Quorum Execute 21.1.87
 date: 2022-03-29
 ---
 

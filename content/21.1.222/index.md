@@ -1,5 +1,4 @@
 ---
-title: Quorum Execute 21.1.222
 date: 2022-11-29
 ---
 

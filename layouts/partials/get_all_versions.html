@@ -1,0 +1,16 @@
+{{/* Return a list of all versions and sub-items */}}
+
+{{ $versions := slice }}
+{{ range $page := site.Pages.ByDate.Reverse }}
+    {{ $base := $page.File.Dir }}
+
+    {{/* Don't try and process anything except for version-y folders */}}
+    {{ if (not (findRE "^\\d+\\.\\d+\\.\\d+[/\\\\]$" $base)) }}
+        {{continue}}
+    {{ end }}
+
+    {{ $version := (partial "get_version" $page) }}
+    {{ $versions = $versions | append $version }}
+{{ end }}
+
+{{ return $versions }}
