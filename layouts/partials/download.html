@@ -1,0 +1,6 @@
+{{ $showDownload := eq "true" (getenv "HUGO_SHOW_DOWNLOAD_LINKS") }}
+{{ if $showDownload }}
+<div class="mb-2">
+    <a href="https://updates.aucerna.app/execute/21/Aucerna_Execute_20{{.detail.Version}}.zip" class="rounded bg-green-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Download {{ .detail.Version }}</a>
+</div>
+{{ end }}

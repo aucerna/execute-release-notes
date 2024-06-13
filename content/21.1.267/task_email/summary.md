@@ -10,4 +10,4 @@ To help get you started, we've created a new sample notifications for the Job (R
 
 ![](samples.png)
 
-Note: There is currently a known issue that makes it impossible to build notifications when a task assigned to a user is reactivatd.  We are aware of this and working on a fix in a coming release.
+Note: There is currently a known issue that makes it impossible to build notifications when a task activated/reactivated and assigned to a user.  We are aware of this and working on a fix in a coming release.

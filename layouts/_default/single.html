@@ -11,6 +11,8 @@ Changes in
 
 {{ $detail := partial  "get_version" . }}
 
+{{ partial "download" (dict "detail" $detail) }}
+
 {{ partial "sections" (dict 
     "ShowVersion" false 
     "Items" $detail.Items
