@@ -22,14 +22,14 @@
   {{ range $i, $item := (partial "get_all_versions" .) }}
   <tr class="even:bg-gray-100">
       <td>
-      <a href="{{$item.Link}}" class="hidden md:block">
+      <a href="{{$item.Link}}index.html" class="hidden md:block">
         {{ if $item.Title }}
           {{ $item.Title }}
         {{ else }} 
          {{site.Params.ProductName}} {{$item.Version}}
         {{ end }}
       </a>
-      <a href="{{$item.Link}}" class="md:hidden">{{$item.Version}}</a>
+      <a href="{{$item.Link}}index.html" class="md:hidden">{{$item.Version}}</a>
       </td>
       <td>{{time.Format "January 2, 2006" $item.Date}}</td>
       <td>
@@ -39,8 +39,8 @@
       </td>
       <td>
       {{ if gt $i 0}}
-      <a href="{{$item.Link}}/since.html" class="hidden md:block">Changes since {{$item.Version}}</a>
-      <a href="{{$item.Link}}/since.html" class="md:hidden">Changes since</a>
+      <a href="{{$item.Link}}since.html" class="hidden md:block">Changes since {{$item.Version}}</a>
+      <a href="{{$item.Link}}since.html" class="md:hidden">Changes since</a>
       {{ end }}
       </td>
   </tr>

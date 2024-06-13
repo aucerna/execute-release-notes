@@ -19,10 +19,10 @@ productName = "Execute"
 [menu]
   [[menu.main]]
     name = "Home"
-    url = "/"
+    url = "/index.html"
     weight = 1
 
   [[menu.main]]
     name = "All Changes"
-    url = "/everything/"
+    url = "/everything/index.html"
     weight = 2 
