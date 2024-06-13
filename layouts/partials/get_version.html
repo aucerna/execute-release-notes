@@ -41,6 +41,7 @@
     {{ end }}
     {{ $d = $d | merge (dict "Version" $version) }}
     {{ $d = $d | merge (dict "Date" $page.Date) }}
+    {{ $d = merge $d (dict "Title" (markdownify $d.Title)) }}
     {{ $processed = $processed | append $d }}
 {{ end }} 
 
