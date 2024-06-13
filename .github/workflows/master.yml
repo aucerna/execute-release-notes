@@ -1,0 +1,32 @@
+'on':
+  push:
+    branches:
+      - master
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Node setup
+        uses: actions/setup-node@v4
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.6.0
+        with:
+            hugo-version: latest # optional, default is latest
+            extended: true # optional, default is false
+      - name: NPM
+        run: npm install
+      - name: Build
+        run: hugo -b https://updates.aucerna.app/execute/21/
+      - uses: kheiakiyama/install-azcopy-action@v1
+        with:
+          version: 'v10'
+      - name: Deploy to Azure
+        run: azcopy_v10 sync public/ "https://aucernaupdatesa.blob.core.windows.net/execute/21/" --dest-key "${{ secrets.AZURE_KEY }}" 
