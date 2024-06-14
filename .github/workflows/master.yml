@@ -29,4 +29,4 @@ jobs:
         with:
           version: 'v10'
       - name: Deploy to Azure
-        run: azcopy_v10 sync public/ "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" 
+        run: azcopy_v10 sync public/ "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" --content-cache-control "no-cache" 
