@@ -1,4 +1,4 @@
-baseURL = "https://updates.aucerna.app/execute/21/"
+baseURL = ""
 languageCode = "en-us"
 title = "Quorum Execute Release Notes"
 disableKinds = ["taxonomy", "term"]
@@ -11,9 +11,14 @@ productName = "Execute"
     mediaType = "text/html"
     baseName = "since"
     isHTML = true
+  [outputFormats.current]
+    MediaType = "text/plain"
+    BaseName = "current"
+    IsPlainText = true
+    NotAlternative = true
   
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "current"]
   page = ["HTML", "since"]
 
 [menu]

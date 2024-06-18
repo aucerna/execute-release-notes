@@ -1,0 +1,2 @@
+{{- $v := partial "get_latest_version" . -}}
+{{ print "20" $v.Version ".0" }}

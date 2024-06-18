@@ -1,0 +1,16 @@
+{{ $detail := dict }}        
+{{ range $page := site.Pages.ByDate.Reverse }}
+    {{ $base := $page.File.Dir }}
+
+    {{/* Don't try and process anything except for version-y folders */}}
+    {{ if (not (findRE "^\\d+\\.\\d+\\.\\d+[/\\\\]$" $base)) }}
+        {{continue}}
+    {{ end }}
+
+    {{ $detail = (partial "get_version" $page) }}
+    {{ break }}
+{{ end }}
+
+{{ return $detail }}
+
+

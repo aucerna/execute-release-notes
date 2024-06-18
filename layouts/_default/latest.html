@@ -1,0 +1,17 @@
+{{ define "title"}}
+{{.Title}}
+{{end}}
+
+{{ define "main" }}
+{{ $detail := partial  "get_latest_version" . }}
+
+<div class="prose prose-sm max-w-none pb-4">
+{{.Content}} 
+
+<p>The current release version is <b>{{.Site.Params.ProductName}} {{$detail.Version}}</b> released on {{time.Format "January 2, 2006" $detail.Date}}.</p>
+
+<p><a href="{{ partial "download" (dict "detail" $detail) }}" class="rounded bg-green-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 no-underline">Download {{ $detail.Version }}</a></p>
+
+</div>
+
+{{end}}
