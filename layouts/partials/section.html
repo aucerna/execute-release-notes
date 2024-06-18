@@ -69,7 +69,7 @@
   {{end}}
 
   {{if $item.Item }}
-    {{ range $pbi := (split $item.Item ",") }}
+    {{ range $pbi := (split $item.Item "&") }}
       {{ $pbi = strings.Trim $pbi " " }}
       {{ $showLinks := eq "true" (getenv "HUGO_SHOW_DEVOPS_LINKS") }}
       {{ if $showLinks }} <a class="no-underline" href="https://dev.azure.com/Aucerna/Aucerna/_workitems/edit/{{ $pbi }}"> {{ end }}
