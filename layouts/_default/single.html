@@ -11,6 +11,8 @@ Changes in
 
 {{ $detail := partial  "get_version" . }}
 
+{{ partial "draft" . }}
+
 {{ $showDownload := eq "true" (getenv "HUGO_SHOW_DOWNLOAD_LINKS") }}
 {{ if $showDownload }}
 {{ partial "download_panel" (dict "detail" $detail) }}
