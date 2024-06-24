@@ -1,0 +1,4 @@
+type,tags,title,weight,detail,item#
+enhancement,"performance,opsched",Huge speed improvement when using the job hopper to add jobs to a large schedule.,,,269386
+bug,system,"Execute will now prevent certain long-running and computationally expensive jobs (import/update multiple, and generate support package) from being started multiple times simultaneously.  This would sometimes happen if a user rapidly clicked on the start button, causing the job to be submitted multiple times.  In the case of imports, this could cause the data to be imported multiple times.",,,274986
+bug,system,"Resolved an issue where the support package would fail to generate successfully when including Document Metadata.  This issue was introduced in the previous email enhancements because the newly added fields had unspecified field lengths (not a problem for Execute, but unexpected for the support package generator).",,,281821

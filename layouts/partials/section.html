@@ -38,7 +38,7 @@
 
   <li 
     {{ if in (split $item.Tags ",") "important" }}
-    class="bg-red-100 pt-1 pl-2 pr-2 pb-2"
+    class="bg-red-100 p-2"
     {{ end }}
     x-data="{ 
       expanded: false,
@@ -56,6 +56,11 @@
     "
     x-show="show">
 
+    {{ if $item.DetailBody }}
+    <button type="button" x-show="expanded" @click="expanded = !expanded" style="display: none" class="mr-2 mt-1 rounded bg-gray-800 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">Hide Details</button>
+    <button type="button" x-show="!expanded" @click="expanded = !expanded" class="mr-2 mt-1 rounded bg-gray-100 px-2 py-1 text-xs font-semibold text-black shadow-sm hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">Show Details</button>
+    {{ end }}
+  
   {{$item.Title}}
 
   {{ if $item.Tags }}
@@ -80,14 +85,9 @@
     {{ end }}
   {{end}}
 
-  {{ if $item.DetailBody }}
-  <br/>
-  <button type="button" x-show="expanded" @click="expanded = !expanded" style="display: none" class="mt-1 rounded bg-indigo-800 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Hide Details</button>
-  <button type="button" x-show="!expanded" @click="expanded = !expanded" class="mt-1 rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Show Details</button>
-  {{ end }}
 
   {{ if $item.DetailBody }}
-  <div class="text-xs overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded" x-cloak>
+  <div class="text-xs md:text-sm overflow-hidden rounded-lg bg-indigo-50 shadow mt-2" x-show="expanded" x-cloak>
   <div class="px-8 py-4">
   {{ $item.DetailBody }}
   </div>
