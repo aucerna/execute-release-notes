@@ -12,3 +12,4 @@ enhancement,"performance,integration","Document Synchronization and Bulk Loads c
 bug,"performance,opsched",We've eliminated a potential memory leak in Operational Scheduling where the detail grids (below the gantt) weren't always cleaned up properly when we didn't need them any more. ,,,279943
 enhancement,performance,We've made some improvements to responsiveness when pasting large amounts of data from Excel (using our import/update multiple record functionality). ,,,280994&280995
 enhancement,plugins,We've continued to clean-up and finesse our Data Selector sample configuration files to make them easier to understand and implement. ,,,281351
+bug,system,Added a rate limiter to the new Duplicate API call checker to avoid overloading logs.,,,284913
