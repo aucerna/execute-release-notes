@@ -1,0 +1,9 @@
+type,tags,title,weight,detail,item#
+bug,afe,Fixed an annoying issue where the route for review comment box would clear itself when you clicked outside of the comment box.,,,228443
+bug,"integration,system",Fixed an issue where document synchronizations would create multiple rows if the document's visibility rule excluded admins. ,,,237917
+bug,"security,integration",We've ensured that errors when connecting to databases (such as using the Connection String Editor's test button) don't expose the connection string which may contain security credentials.,,,268092
+bug,system,We've added some additional safety checks to ensure you don't accidentally bulk import the same data twice (causing duplication).,,,268614
+bug,system,Resolved issue where the sample connection string for EXECUTE_INTERNAL wasn't able to be copied into a plugin because of case-senstivity issues.,,,269490
+bug,system,The system will now wait for all scheduled tasks to complete before shutting down.,,,280989
+enhancement,opsched,Added support for new concurrent operational scheduling licenses.,,,270672
+enhancement,integration,We've made improvements to the Integration Agent's auto-update mechanism to make it more reliable for organizations with restrictive firewalls.,,,279370
