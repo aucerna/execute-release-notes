@@ -1,0 +1,8 @@
+type,tags,title,weight,detail,item#
+bug,system,Improved the clarity of error messages raised when a Document Link Summary view is misconfigured to make finding and fixing the mistake easier. ,,,253151
+bug,opsched,Fixed an annoying issue where switching schedule views would sometimes jump to a different view a few seconds later. ,,,288470
+feature,integration,"Added a new streamlined Document Fetch API as part of Execute's Advanced Data Export offering. This API makes it easier to slurp bulk data out of Execute to populate an internal data warehouse, or similar. ",,fetch,288479
+enhancement,admin,"The new Show Field Usage function takes a while to work on very large record types. We've added a loading bar so that you won't be left wondering, ""Is it working?""",,,288972
+enhancement,"system,performance",Updated HTTP caching headers to improve page load performance across the system. ,,,288982
+bug,"integration,peloton",Fixes to the export of AFEs to Peloton-hosted SiteView (2.1 APIs). ,,,291362
+bug,"system,budget",We resolved an issue where we were inadvertently creating automated document links to Project Snapshots. ,,,291678
