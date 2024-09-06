@@ -1,0 +1,6 @@
+type,tags,title,weight,detail,item#
+bug,system,Fixed an issue where a misconfigured plugin would cause the menubar to fail to load.,,,245798
+bug,opsched,Fixed an error where users were unable to update activity duration on activities in Execute's operational scheduling module.,,,289480
+enhancement,performance,Improvements to calculated field performance for formulas that involved a divide by zero.,,,291058
+enhancement,reporting,"Browse reports (and many other report tabs) now support frozen titles, and columns using the new pushpin icon.",,,296096
+enhancement,security,Upgraded 3rd party library (underscore.js) to eliminate a potential security vulnerability.,,,298303
