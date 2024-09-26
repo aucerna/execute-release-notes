@@ -1,0 +1,9 @@
+type,tags,title,weight,detail,item#
+bug,"opsched,performance",Execute would run out of memory when trying to show really huge views (20k+ activities) in Operational Scheduling.  We've adjusted that so that Execute will load a smaller set of activities and alert the user that they are viewing truncated results. ,,,279726
+enhancement,"system,integration",Execute's integration logging now includes support for logging calls NDJSON APIs (such as our own Fetch APIs). ,,,296342
+bug,afe,Resolved an issue where the Net Supplement columns would be incorrect on AFEs using Estimate Phases. ,,,297871
+enhancement,integration,Updated default DynamicDocs configuration file. ,,,300773
+bug,integration,Increased AzureSQL timeout when clearing the TEMP table to allow Execute to recover from a very large failed sync. ,,,300922
+bug,budget,Resolved issue with Project reforecasting when spend curves are being used. ,,,301600
+enhancement,integration,Added a new 'Flags' configuration item which can be used to suppress sending specified document types to a remote Data Warehouse. ,,,302797
+enhancement,integration,Updated default configuration file for ODA integration.,,,
