@@ -7,3 +7,4 @@ bug,integration,Increased AzureSQL timeout when clearing the TEMP table to allow
 bug,budget,Resolved issue with Project reforecasting when spend curves are being used. ,,,301600
 enhancement,integration,Added a new 'Flags' configuration item which can be used to suppress sending specified document types to a remote Data Warehouse. ,,,302797
 enhancement,integration,Updated default configuration file for ODA integration.,,,
+enhancement,integration,Performance improvements when importing field costs from WellView and SiteView.,,,303107
