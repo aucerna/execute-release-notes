@@ -1,0 +1,4 @@
+type,tags,title,weight,detail,item#
+enhancement,"integration,important","Major improvements to SQL Warehouse to improve performance, error recovery and reliability.  These enhancements **require a manual update step**",,warehouse,285281
+enhancement,"integration,security,important","Execute will now prevent password-based logins (login screen, APIs and OData) for environments which use Windows single-signon or Okta/OIDC.",,federation,306539
+note,important,"This update includes possible breaking changes for users of Execute's Data Warehousing feature (AzureSQL, Snowflake and DataHub), and environments using Single Sign-on (Windows/OKTA/OIDC).  Please carefully review the release notes for this version prior to upgrading!",,,
