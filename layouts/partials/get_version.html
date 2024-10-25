@@ -45,6 +45,13 @@
     {{ $processed = $processed | append $d }}
 {{ end }} 
 
+{{ $hasBreaking := false }}
+{{ range $processed }}
+  {{ if in .Tags "manual step" }} <!-- check if "Apple" is in .Params.tags -->
+    {{ $hasBreaking = true }}
+  {{ end }}
+{{ end }}
+
 {{ return (dict 
     "Version" $version
     "Draft" $page.Draft
@@ -52,5 +59,6 @@
     "Date" $page.Date
     "Title" $page.Title
     "HasSchemaChanges" (gt (len (where $processed ".Type" "eq" "schema")) 0)
+    "HasBreakingChanges" $hasBreaking
     "Link" $page.RelPermalink
 )}}

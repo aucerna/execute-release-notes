@@ -10,6 +10,8 @@ Changes since {{.Site.Params.ProductName}} {{ (partial "get_version_for_page" .)
   {{ $items = $items | append $v.Items }}
 {{ end }}
 
+{{ partial "breaking_panel" (dict "items" $items) }}
+
 {{ partial "sections" (dict 
     "ShowVersion" true
     "Items" $items
