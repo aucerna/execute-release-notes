@@ -13,6 +13,8 @@ Changes in
 
 {{ partial "draft" . }}
 
+{{ partial "breaking_panel" (dict "items" $detail.Items) }}
+
 {{ $showDownload := eq "true" (getenv "HUGO_SHOW_DOWNLOAD_LINKS") }}
 {{ if $showDownload }}
 {{ partial "download_panel" (dict "detail" $detail) }}

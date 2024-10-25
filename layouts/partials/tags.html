@@ -1,5 +1,7 @@
 {{ $tag := strings.Trim (lower .Tag) " "}}
-{{ if eq $tag "security" }} 
+{{ if in (slice 
+  "security" "manual step"
+  ) $tag }}
    <span @click="search = '#{{ $tag }}'" class="cursor-pointer inline-flex items-center rounded-md bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">#{{$tag}}</span>
 {{ else if eq $tag "important" }}
 {{ else if eq $tag "integration" }}

@@ -1,0 +1,5 @@
+type,tags,title,weight,detail,item#
+enhancement,"integration,manual step","Major improvements to SQL Warehouse to improve performance, error recovery and reliability.  These enhancements **require a manual update step**",,warehouse,285281
+enhancement,"integration,security,manual step","Execute will now prevent password-based logins (login screen, APIs and OData) for environments which use Windows single-signon or Okta/OIDC.",,federation,306539
+schema,,Added new `CHUNK` column to `EXECUTE_DOCUMENTS` in Warehouse schema.  A document may now be split across multiple chunks (having multiple rows).,,,
+schema,,Removed the data column from `EXECUTE_DOCUMENTS_LATEST` in SQL Warehouse schema.,,,
