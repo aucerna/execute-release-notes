@@ -1,0 +1,18 @@
+type,tags,title,weight,detail,item#
+bug,plugins,"Fixed a typo (missing "">"") in the sample ""Expense Forecast"" widget. ",,,263772
+bug,afe,"Fixed wording of the AFE's ""Change Company"" feature on the Partners tab.  The title now lists the company's name, instead of just repeating the word company twice. ",,,267358
+bug,system,We fixed an issue where the new browse screen update feature (a.k.a. pencil mode) would fail when trying to set a dropdown list field to null (no value). ,,,292810
+enhancement,"system,security",Updated .NET framework to .NET Core 8.  Updated many of our 3rd party libraries to the latest versions. ,,,293070
+bug,"system,admin","Resolved an issue where users could not set values for Additional Storage Table fields on records created after a new Storage Table was added but before restarting Execute.  Upon upgrade, the system will fix records that are currently experiencing this suboptimal behavior. ",,,304858
+bug,budget,"Resolved issue where the Due for Forecast filter was including projects it shouldn't.  Also added a ""please wait"" indicator when bulk accepting forecasts. ",,,307384
+bug,system,Resolved an issue where Execute wasn't closing temporary files correctly.  This caused some unexpected (but harmless) errors to show up when restarting the service. ,,,307541
+bug,system,"Resolved an issue when copying a database from Oracle to SQL Server where the Oracle database contained dates before 1753 (Yes... 1753...).  These unusual dates occassionally snuck into the database through database scripts and imports, and would cause the upgrade to crash.  ",,,307776
+bug,budget,Fixed issues with the Due for Forecast filter's identification of projects with new or updated actuals. ,,,307941
+bug,afe,We resolved an issue where deleting a user who had been delegated field cost entry would cause the service to fail to start. ,,,307963
+bug,system,Resolved an issue where Execute's startup data validation routines could occasionally run slowly enough to timeout. ,,,308330
+bug,"system,security",Deleting a user now deletes all sessions associated with that user. ,,,310101
+bug,plugins,Added time zone configuration to our sample table_data_selector plugin. ,,,310187
+enhancement,integration,Updated the Reporting/Browse API to make the filter parameter optional. ,,,310598
+bug,system,Resolved an issue where an undeleted document wouldn't be visible in the Browse screen until a service restart. ,,,310725
+enhancement,integration,"Added a ""DOCUMENT_TYPE"" hint for Document Reference fields to Execute's JSON serializer.  This improves Snowflake/Azure SQL Warehouse Exports and the new Document Fetch APIs. ",,,311108
+bug,workflow,Fixed an issue with custom fields not showing when creating workflows on User and Partner documents. ,,,314180
