@@ -1,0 +1,5 @@
+{{- $all := (partial "get_all_versions" .) }}
+{{- range $v := $all }}  
+{{- $dl := partial "download" (dict "detail" $v)}}
+{{- print $v.Version "," $dl "\n" }}
+{{- end }}
