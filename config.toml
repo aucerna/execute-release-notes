@@ -16,9 +16,15 @@ productName = "Execute"
     BaseName = "current"
     IsPlainText = true
     NotAlternative = true
+  [outputFormats.versions]
+    MediaType = "text/csv"
+    BaseName = "versions"
+    IsPlainText = true
+    NotAlternative = true
+  
   
 [outputs]
-  home = ["HTML", "current"]
+  home = ["HTML", "current", "versions"]
   page = ["HTML", "since"]
 
 [menu]
