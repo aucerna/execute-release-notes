@@ -1,0 +1,8 @@
+type,tags,title,weight,detail,item#
+enhancement,security,"Execute, our installer, and the helper utilities are now digital signed by Quorum.",,,293676
+bug,system,Fixed an issue where adding an additional storage table that included the name of its parent table would cause an issue.,,,303945
+bug,system,Fixed issue where you could bulk import a reporting calculated column whose ID exceeded the maximum allowed length.,,,308428
+enhancement,api,Added a 6mo option for API key lifetime.,,,316723
+bug,"integration,wellez","When exporting the AFE to ODW, the description is now trimmed to 50 characters.",,,325648
+bug,afe,Fixed default placement of the monthly columns on the Field Cost Entry screen to directly to the left of the total column.,,,325711
+bug,integration,Fixed an issue where changing a UWI from DLS to API would leave the old Lat/Long in place.,,,319947
