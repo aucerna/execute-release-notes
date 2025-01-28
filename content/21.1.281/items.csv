@@ -1,0 +1,3 @@
+type,tags,title,weight,detail,item#
+feature,system,"Improved capability for referencing fields on other documents.",,refs,306214
+bug,system,"Fixed a super annoying issue where the screen would sometimes automatically scroll when interacting with dropdown fields 😡.  Primarily, this was noticable when selecting a report on a Browse screen with large numbers of visible columns.",,,327877
