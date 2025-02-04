@@ -1,0 +1,4 @@
+type,tags,title,weight,detail,item#
+enhancement,security,Upgraded Snowflake library to mitigate potential security vulnerability.,,,329078
+bug,system,"Resolved an issue where adding a custom link to the help menu would cause the release notes links to disappear.  While we were at it, we also added support for ""mailto:"" links in the help menu making it easy for users to launch a new email to your internal Execute support team from the Execute help menu.",,,328756
+enhancement,budget,"Added a new optional ""Net Project"" field to Projects which ensures that all forecasting/actuals on that project are Net $ (useful for bucket-type projects).",,,328293
