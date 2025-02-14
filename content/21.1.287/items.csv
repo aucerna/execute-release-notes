@@ -1,0 +1,7 @@
+type,tags,title,weight,detail,item#
+enhancement,"enersight,reporting","Added a new ""Updated Capital"" column to the ""Schedule - Activity"" report type.  This new column will return updated capital from the Budgeting and Forecasting module for the activity (splitting it between multiple activities if required).  This is useful for exporting updated capital to an Excel-based Enersight well list. </span> ",,,328760
+enhancement,integration,"ODA integration credentials are now automatically encrypted if entered in plaintext (this is entirely a Quorum thing, but it is captured here to ensure we don't forget!) ",,,329060
+bug,system,"Resolved an issue where a database could become invalid if adding a new field to the database took longer than our default timeout of 30 seconds.  This timeout would cause the field to be added to the main table, but not be added to the history table, causing future save operations to fail.  This only occurred for truly monstrous custom tables. ",,,329663
+enhancement,integration,Add a new schema endpoint to our Fetch API to allow retrieving the structure of Execute data. ,,,330385
+bug,system,Resolved an issue where adding a custom table to an additional storage table would break the change history tab for all current documents of that type.   ,,,331117
+bug,system,Resolved an issue where environments with large numbers of fields were taking an uncomfortably long time to verify that fields on startup (in the specific case what was taking about ten minutes now takes a fraction of a second).,,,330810
