@@ -14,3 +14,4 @@ bug,system,"Adding insult to injury for those who prefer the ""dd/mm/yyyy"" date
 enhancement,workflow,We've improved the scrollbars when viewing the diagram on really wide workflow definitions. ,,,333081
 bug,system,"Resolved an issue where changes made to a Blockly rule after using the ""Code Editor"" mode were not saved properly. ",,,333156
 bug,system,"Fixed an issue where Audit events (such as an admin force approving an AFE) were not showing on the Change Tracking tab as intended.  Note that the changes made were always captured in the change history, and the audit event itself was still captured and visible in the global audit log. ",,,333327
+schema,,Added PARTNER.LOGO_BASE64 and USER.SIGNATURE_BASE64 fields to store images for forms use.,,,
