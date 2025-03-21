@@ -1,0 +1,6 @@
+type,tags,title,weight,detail,item#
+enhancement,opsched,"Added a new ""Capital Actuals"" column to Schedule Activity report types.",,,333238
+bug,system,We now prevent the bulk field importer from loading empty formula fields as these are invalid and cause other issues in the system.,,,333745
+bug,reporting,"We've added the ""Document Id (match on)"" back to Update multiple from Excel from the Browse screen.",,,334756
+enhancement,budget,We've added an optional flag to prevent pushing historical forecast start dates to Val Nav.,,,333842
+enhancement,system,System restart requests are now added to the audit log.,,,333843
