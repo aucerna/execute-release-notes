@@ -1,13 +1,15 @@
-A often requested feature is to allow user's to delegate their own reviewers/approvers when they go on vacation, rather than requiring those requests to full through the system administrator.
+# Out of Office Delegation
 
-A new setting will enable this functionality.
+A frequently requested feature is now available: users can delegate their own review or approval when they're away—without needing to go through a system administrator.
+
+To enable this functionality, simply toggle the new setting:
 
 ![](setting.png)
 
-Once enable, user's will see a new option under their user menu (top right) to set out of office.
+Once enabled, users will see a new "Out of Office" option under their user menu (top right):
 
 ![](ooo.png)
 
-From here, users will get an out of office wizard that's almost identical to what the administrators are using today.
+From there, users will be guided through a simple delegation wizard, similar to the one currently used by administrators.
 
-One note.  This functionality only makes sense in environments where users can be trusted to select their own delegates.  There is currently no rule system that ensures the selected user actually has authority to approve/review on behalf of the user.
+> Note: This feature is best suited for environments where users are trusted to choose appropriate delegates. At this time, there is no rule system in place to validate that the selected delegate has the necessary approval or review authority.

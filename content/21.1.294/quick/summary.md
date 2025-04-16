@@ -1,10 +1,12 @@
-List fields in Execute typically have a `+` icon next to them as a shortcut to adding a new record of that type and automatically selecting it.
+# Improved Quick Add Experience
 
-Historically, the pop-up "Quick Add" form was rather ugly.  It listed every field on the new record in alphabetical order.
+In Execute, list fields typically include a `+` icon that lets users quickly create and select a new record of that type.
 
-In this release, the default is to use the first (default) tab for each document and only fall back to the weird alphabetical tab if there are no custom tabs defined.
+Historically, the Quick Add pop-up form wasn’t exactly elegant—it displayed all fields on the new record in alphabetical order, which wasn’t always helpful.
 
-So...  Adding a Pad from my Well now looks a whole lot nicer.
+In this release, Quick Add now defaults to using the first (default) tab defined for that document type. It will only fall back to the alphabetical view if no custom tabs are available.
+
+So now, adding a Pad from your Well looks a whole lot cleaner:
 
 ![](quickadd.gif)
 
