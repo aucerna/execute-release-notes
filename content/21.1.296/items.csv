@@ -1,6 +1,6 @@
 type,tags,title,weight,detail,item#
 bug,"system,admin",Resolved an issue where adding a List Filter could sometimes freeze the UI. ,,,336708
-enhancement,ui,"We've changed the default behaviour when viewing attachments to open in the browser/default application instead of downloading them.  This is much more consistent with other web-based applications.  Users who want to download the file can right-client and ""Save As"". ",,,338037
+enhancement,ui,"We've changed the default behaviour when viewing attachments to open in the browser/default application instead of downloading them.  This is much more consistent with other web-based applications.  Users who want to download the file can right-click and ""Save As"". ",,,338037
 bug,plugins,Resolved an issue where the Bulk Export plugin could cause Execute to fail to start if the destination folder didn't exist. ,,,338041
 bug,afe,Resolved issue where Custom Business rules failed to show custom fields on the AFE's well table. ,,,338359
 bug,"afe,wellez",Resolved an issue preventing AFEs from being exported to WellEz. ,,,339020
@@ -8,7 +8,7 @@ bug,"afe,system",Resolved an issue where the database upgrade would fail in envi
 enhancement,"integration agent,integration",The Integration Agent now supports connections to Snowflake (for Document Sync purposes). ,,,339388
 enhancement,"system,afe",Execute's unique value validation rule now works with UWI-type fields. ,,,338517
 enhancement,"system,security,integration",Upgraded Snowflake library to the latest and greatest. ,,,338212
-enhancement,system,"If you'd like to see your primary document types (those in the top toolbar) in a specific order, and have been annoyed at how prefixing them with ""1."", ""2."", ... made everything else in the application look... good news.  We've added a new configuration setting that allows you to set the sort order! ",,,338259
+enhancement,system,"If you'd like to see your primary document types (those in the top toolbar) in a specific order and have been annoyed at how prefixing them with ""1."", ""2."", ... made everything else in the application look a bit wonky... good news.  We've added a new configuration setting that allows you to set the sort order! ",,,338259
 enhancement,integration,We've lowered the batch size limit when exporting Execute data to Snowflake / Azure SQL to help eliminate issues with large documents like Schedules causing excessively large batches. ,,,337950
 enhancement,"integration,wellez","We've relaxed the rules a bit for account matching between Execute and ODW.  So if your Execute account numbers are formatted like ""100 / 234"", but you have ""100 .-=-. 234"" in ODW, you'll be pleased to know that the integration will work just fine. ",,,337090
 enhancement,system,Improved error logging around login with OIDC to make troubleshooting easier. ,,,337130
@@ -17,5 +17,6 @@ bug,ui,"For those of you rocking the commas in your report names, you'll be glad
 enhancement,system,Removed legacy actuals/field cost helper views from new databases.   Existing databases are unchanged. ,,,333389
 enhancement,budget,Ever want to clear the date from a project activity?  Now you can! ,,,334073
 bug,workflow,We've resolved an issue where workflow task fields would sometimes jump mysteriously for workflows loaded with the historical loader. ,,,334868
-bug,"system,afe","We've resolved an issue where we created new versions in the ACTUALS_DOC_V table much more often than we should have and, at the same time, ensured that AFE acutals and field costs will now move across into your external data warehouse. ",,,335140
+bug,"system,afe","We've resolved an issue where we created new versions in the ACTUALS_DOC_V table much more often than we should have and, at the same time, ensured that AFE actuals and field costs will now move across into your external data warehouse. ",,,335140
 enhancement,budget,"We've improved the Due for Forecast filter, ensuring that project owners can more reliably see projects that need their attention. ",,,335791
+enhancement,formula,"We've improved the Min/Max formula functions to work with date-type fields, and to have more sensible handling of null (empty) values.  Note that with the new changes ""Min(1,null,2)"" will now return ""1"" whereas it used to treat the null as a zero and would have returned ""0"".  If you need this old behaviour, you can wrap the values with the coalesce function ""Min(1, coalesce(null,0), 2)"".",,,338039
