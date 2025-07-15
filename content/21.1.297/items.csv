@@ -10,5 +10,8 @@ bug,"system,admin","Resolved an issue where list filters wouldn't immediately cl
 bug,admin,Resolved an issue where the FieldInfo report would show an error in the Field Type column for fields that had been deleted. ,,,341516
 feature,"afe,admin",By popular demand... Execute now allows you to automatically release an AFE for approval after review is completed! ,,auto_release,341618
 bug,admin,Resolved an issue where Custom Business rules failed to show custom fields on the AFE's well table. ,,,338359
-feature,"admin,system","Foundation for Execute's new in-app update mechanism, which will allow an authorized user to upgrade to future releases from within Execute.",,,316299
+feature,"admin,system","Foundation for Execute's new in-app update mechanism, which will allow an authorized user to upgrade to future releases from within Execute.  Note that this change does make changes to the folder structure of the Execute Service and adjusts permissions for the Execute service user so that it can make future updates to those folders and the Execute Service itself.",,,316299
+enhancement,"admin,workflow","We now support for List Filters on Workflow Tasks.",,,293061
+enhancement,"system","We've added icons to fields on Tasks and Custom Tabs to identify fields from related documents (vs. the document the user is currently working with).",,,318332
+bug,"workflow","Resolved an issue where the order of Workflow Task fields could break field permissions.",,,334861
 feature,system,"Most Execute documents now support ""Shared Locks"".  This means multiple users can simultaneously edit the same document (Well, Job, or Site) and have their changes magically merged together.  This helps avoid those situations where you can't update your job with the latest spud date because Jim was busy updating the job's safety information and went for lunch leaving it locked.",,locks,327274
