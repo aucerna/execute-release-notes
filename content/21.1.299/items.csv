@@ -1,0 +1,2 @@
+type,tags,title,weight,detail,item#
+bug,"system","Fixed issue that was causing Execute to generate invalid license IDs on Windows-based servers.",,,343124
