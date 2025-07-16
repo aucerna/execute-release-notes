@@ -17,10 +17,12 @@ Changes in
 
 {{ partial "breaking_panel" (dict "items" $detail.Items) }}
 
-
+{{ $broken := .Params.broken }}
+{{ if or (not $broken) (eq $broken "") }}
 {{ $showDownload := eq "true" (getenv "HUGO_SHOW_DOWNLOAD_LINKS") }}
 {{ if $showDownload }}
 {{ partial "download_panel" (dict "detail" $detail) }}
+{{ end }}
 {{ end }}
 
 {{ partial "sections" (dict 
