@@ -24,14 +24,14 @@ jobs:
       - name: NPM
         run: npm install
       - name: Build
-        run: hugo -b https://release-notes.deliveryraptor.net/ -D -F
+        run: hugo -b https://www.deliveryraptor.net/notes/ -D -F
         env:
           HUGO_SHOW_DEVOPS_LINKS: true
           HUGO_SHOW_DOWNLOAD_LINKS: true
-      - name: Upload to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PAGES_PROJECT_NAME }}
-          directory: ./public
+      - name: Create SSH key
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      - name: Deploy with rsync
+        run: rsync -rav --delete public/ deploy-afedev@epsilon.erratic.cloud:notes
