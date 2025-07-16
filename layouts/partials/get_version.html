@@ -60,5 +60,6 @@
     "Title" $page.Title
     "HasSchemaChanges" (gt (len (where $processed ".Type" "eq" "schema")) 0)
     "HasBreakingChanges" $hasBreaking
+    "Broken" $page.Params.broken
     "Link" $page.RelPermalink
 )}}
