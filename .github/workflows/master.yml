@@ -31,9 +31,4 @@ jobs:
       - name: Deploy to Azure
         run: azcopy_v10 sync public/ "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" 
       - name: Disable caching on all blobs
-        run: |
-          azcopy_v10 set-properties "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" `
-            --recursive=true `
-            --cache-control="no-cache, no-store, must-revalidate" `
-            --pragma="no-cache" `
-            --expires="0"
+        run: azcopy_v10 set-properties "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" --recursive=true --cache-control="no-cache, no-store, must-revalidate" --pragma="no-cache" --expires="0"
