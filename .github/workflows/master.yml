@@ -33,7 +33,7 @@ jobs:
               --account-name aucernaupdatesa \
               --account-key "${{ secrets.AZURE_ACCESS_KEY }}" \
               --destination execute \
-              --destination-path 21/test \
+              --destination-path 21 \
               --source public \
               --overwrite true \
               --content-cache-control "no-cache, no-store, must-revalidate"
