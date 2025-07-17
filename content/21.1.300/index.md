@@ -1,0 +1,5 @@
+---
+date: 2025-07-17
+---
+
+There is nothing new in this release.  This release is a *placebo* for folks to test the behavior of the in-app updates within Execute.  Upgrade Execute to 21.1.299, enable the `Allow In-App Upgrade` setting, and grant an administrative user the `Can Upgrade Execute` privilege to see the upgrade button on the Execute dashboard.

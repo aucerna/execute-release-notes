@@ -9,15 +9,26 @@ Changes in
 
 {{ define "main" }}
 
+{{ if .Content }}
+<div class="prose prose-sm max-w-none mb-4">
+  {{.Content}} 
+</div>
+{{ end }}
+
 {{ $detail := partial  "get_version" . }}
 
 {{ partial "draft" . }}
 
+{{ partial "broken" .  }}
+
 {{ partial "breaking_panel" (dict "items" $detail.Items) }}
 
+{{ $broken := .Params.broken }}
+{{ if or (not $broken) (eq $broken "") }}
 {{ $showDownload := eq "true" (getenv "HUGO_SHOW_DOWNLOAD_LINKS") }}
 {{ if $showDownload }}
 {{ partial "download_panel" (dict "detail" $detail) }}
+{{ end }}
 {{ end }}
 
 {{ partial "sections" (dict 
