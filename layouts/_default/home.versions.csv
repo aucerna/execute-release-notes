@@ -2,5 +2,5 @@
 {{- range $v := $all }}  
 {{- $dl := partial "download" (dict "detail" $v)}} 
 {{- $manual := cond $v.HasBreakingChanges "manual" "" -}}
-{{- printf "%s,%s,%s\n" $v.Version $dl $manual }}
+{{- printf "20%s,%s,%s\n" $v.Version $dl $manual }}
 {{- end }}
