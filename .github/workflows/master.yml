@@ -25,8 +25,15 @@ jobs:
         run: npm install
       - name: Build
         run: hugo -b https://updates.aucerna.app/execute/21/
-      - uses: kheiakiyama/install-azcopy-action@v1
+      - name: Upload to Azure
+        uses: azure/cli@v1
         with:
-          version: 'v10'
-      - name: Deploy to Azure
-        run: azcopy_v10 sync public/ "https://aucernaupdatesa.blob.core.windows.net/execute/21/?${{ secrets.AZURE_KEY }}" 
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name aucernaupdatesa \
+              --account-key "${{ secrets.AZURE_ACCESS_KEY }}" \
+              --destination execute \
+              --destination-path 21 \
+              --source public \
+              --overwrite true \
+              --content-cache-control "no-cache, no-store, must-revalidate"
