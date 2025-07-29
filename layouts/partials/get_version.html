@@ -47,7 +47,7 @@
 
 {{ $hasBreaking := false }}
 {{ range $processed }}
-  {{ if in .Tags "manual step" }} <!-- check if "Apple" is in .Params.tags -->
+  {{ if in .Tags "manual step" }} 
     {{ $hasBreaking = true }}
   {{ end }}
 {{ end }}

@@ -1,0 +1,9 @@
+type,tags,title,weight,detail,item#
+enhancement,"afe,reporting,system","A new printing serializer has been added that includes linked documents, allowing printed forms that consolidate information from multiple linked documents.",,,340325
+enhancement,"system,integration,reporting",Added new configuration settings that allow Execute to notify an external system after successful startup and before user-initiated shutdown. ,,,343089
+bug,"system,integration","Azure logging now correctly respects environment variables for its settings, ensuring that the EXEC_AZURE_INSIGHTS_CONNECTION variable properly overrides configuration files during initialization.",,,340068
+bug,"workflow,ui",The custom table subview now correctly appears on the Workflow Task pop-up ensuring users can now edit individual fields and tables.,,,346070
+bug,system,"The installer now correctly applies permission changes during headless (scripted) installs, ensuring that in-app updates run smoothly without permission issues. This fix addresses upgrade failures caused by permission adjustments only running during interactive installs, improving reliability for automated update scenarios.",,,344594
+bug,"opsched,system","The OpSched named license user check has been fixed to exclude support users, ensuring only actual licensed users are counted. This prevents support accounts from incorrectly consuming named licenses.",,,346358
+bug,system,"The support package no longer leaves behind temporary directories after use, keeping your Execute server clean and clutter-free.",,,342833
+bug,"ui,well,system","Fixed an issue where the well data header overflowed its container, improving the display and readability in the user interface.",,,
