@@ -7,3 +7,4 @@ bug,system,"The installer now correctly applies permission changes during headle
 bug,"opsched,system","The OpSched named license user check has been fixed to exclude support users, ensuring only actual licensed users are counted. This prevents support accounts from incorrectly consuming named licenses.",,,346358
 bug,system,"The support package no longer leaves behind temporary directories after use, keeping your Execute server clean and clutter-free.",,,342833
 bug,"ui,well,system","Fixed an issue where the well data header overflowed its container, improving the display and readability in the user interface.",,,
+bug,system;api,"Fixed an issue with the HttpMultipartParser to ensure reliable processing of multipart HTTP requests, improving stability and preventing errors during file uploads or form submissions.  (This is a behind the scenes thing that only affected those of you uploading attachments via. our APIs)",,,344588
