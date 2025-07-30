@@ -7,7 +7,9 @@ Changes since {{.Site.Params.ProductName}} {{ (partial "get_version_for_page" .)
 {{ $all := partial "get_all_versions" . }}
 {{ $items := slice }}
 {{ range $v := where $all "Date" "gt" .Date }}  
-  {{ $items = $items | append $v.Items }}
+  {{ range $item := $v.Items }}
+    {{ $items = $items | append $item }}
+  {{ end }}
 {{ end }}
 
 {{ partial "breaking_panel" (dict "items" $items) }}
