@@ -1,0 +1,11 @@
+type,tags,title,weight,detail,item#
+enhancement,"security,api,admin","Users can now renew or rotate their API keys to generate new secrets while keeping the same key ID, enhancing security by enabling regular credential updates. The renewal process includes selecting a new expiration period, and immediate invalidation of the old secret.",,,348493
+enhancement,"attachments,ui","You can now drag and drop files directly into attachment fields to upload and automatically select them, making file uploads faster and more intuitive.  This even includes (at long last) workflow task attachment fields!!!",,,347412
+enhancement,"afe,workflow,system",The auto-release reviewer will now hold off on releasing an AFE for approval until all release validation rules are met.  (NOTE: This means you'll have to pay attention to your release roles as things like invalid overhead configuration will prevent the automatic release of AFEs.),,,348585
+bug,"workflow,system,ui",Fixed an issue where creating blank format-rules on reminders could break sending other reminders.,,,340405
+bug,"workflow,email,system",Fixed an issue where leaving the time zone field blank would stop the entire reminder sending process.,,,340841
+enhancement,"plugins,workflow,system","This release introduces a new plugin that enables CSharp-backed calculated fields, allowing more flexible and powerful custom calculations. Additionally, the Custom Document Action plugin has been enhanced with new post-action and redirect expressions.",,,348121
+enhancement,"ui,system","When viewing change history on large text fields (such as plugins) you'll now see a colored coded ""diff"" view that makes it approximately 1,000,000 times (yes.  Really) easier to spot the differences.",,,347436
+enhancement,"ui,workflow,opsched","The target-date drag tooltip for activities has been improved to follow your mouse pointer instead of sticking in the schedule button bar, preventing annoying page jumps and making the experience much smoother.",,,348265
+enhancement,"plugins,ui","The plugin editor now supports enhanced search functionality using CTRL+F, allowing you to find text beyond what's currently visible on screen.",,,348282
+enhancement,"well,afe,ui",You can now clear temporary placeholder numbers on historically loaded wells and sites just like you do with AFE and RTx.,,,348258
