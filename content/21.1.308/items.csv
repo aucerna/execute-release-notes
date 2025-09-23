@@ -1,0 +1,2 @@
+type,tags,title,weight,detail,item#
+bug,"system,admin","Fixed an issue where the installer could not correctly detect user SIDs for Group Managed Service Accounts (GMSA), ensuring smoother installation and configuration when using these accounts.",,,349480
