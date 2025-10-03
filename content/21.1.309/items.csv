@@ -1,0 +1,2 @@
+type,tags,title,weight,detail,item#
+bug,"workflow","Fixed an issue where Execute's workflow diagrams would break if tasks contained markdown.",,,349858
