@@ -1,0 +1,21 @@
+type,tags,title,weight,detail,item#
+bug,"ui,system",The 'Pair New Device' menu item was missing and has now been restored.  ,,,352072
+enhancement,"plugins,system,admin","Added an emergency feature flag that allows you to stop loading database plugins if they cause issues, preventing situations where the app starts but documents can't be saved due to a broken plugin.",,,351023
+bug,"afe,loader,integration",Fixed issue with bulk loading AFE estimates.,,,351087
+enhancement,"api,security,ui",Added new API Key renewal functionality and API to make it possible to routinely rotate API keys.,,,351519
+bug,"afe,budget,system",Fixed an issue where if base AFE of a revision or supplement was incorrectly allocated to a project there was no way to fix the mapping.,,,350440
+bug,"integration,system","Fixed an issue where DataHub/SQL Warehouse Schema Publisher could generate foreign key name collisions, preventing potential conflicts during data integration and ensuring smoother data publishing.",,,351164
+enhancement,"afe,attachments,system",PDF locking has been disabled for generated AFE and Document forms to accommodate use cases like electronic signatures.,,,351314
+enhancement,"afe,ui",The year range for Estimate Periods on AFEs has been expanded from 4 years around the current year to 10 years.,,,349732
+bug,"afe,ui,system",Fixed a minor JavaScript error that appeared on the AFE Review Status page when opening a newly created AFE.,,,351391
+enhancement,"ui,security",The document print action modal has been migrated from Angular to jQuery.  This was part of our migration away from AngularJS and has no functional impact.,,,350013
+enhancement,"ui,security",The Manage Forms tool has been migrated from Angular to jQuery.  This was part of our migration away from AngularJS and has no functional impact.,,,350021
+enhancement,"ui,security",Preview Approvers actions for RTD and RTX have been migrated from Angular to jQuery.  This was part of our migration away from AngularJS and has no functional impact.,,,350016
+enhancement,"system,opsched",We've added new log messages to improve troubleshooting during database upgrades and monitoring.,,,346403
+enhancement,"afe,ui,attachments","The AFE Printing dialog has been simplified to make selecting partners and forms easier, with new options to generate and download individual PDFs per partner. You can now hide affiliates and electronic balloting companies from the print list, and generated filenames are more descriptive, including AFE number, partner name, and form name when applicable. Additionally, PDF attachments can be included in the final output for a more complete package.",,,349606
+enhancement,"opsched,system","SQL Warehouse sync scheduling has been improved to allow intervals up to one day, with a new anchor hour ensuring daily or twice-daily syncs run at consistent, predictable times regardless of server restarts.",,,351568
+enhancement,"well,integration,system","Document Sync now takes non-exclusive (shared) locks on supported document types, increasing the chances that updates will succeed even when documents are open by other users. ",,,351588
+enhancement,"system,performance",The SQLite library has been upgraded to a newer version.  ,,,350873
+bug,"workflow,ui","The Workflow Task graph has been adjusted to reduce clutter caused by too many nodes or overly large node labels, making it easier to read and navigate your task flows.",,,350288
+bug,"integration agent,ui,integration","The integration agent availability status now correctly displays in the UI, resolving the issue where it always showed as ""unavailable."" ",,,
+enhancement,security,The application has been updated to Angular 1.8.3 to mitigate multiple potential issues.,,,349743
