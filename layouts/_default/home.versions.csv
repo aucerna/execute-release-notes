@@ -1,4 +1,4 @@
-{{- $all := (partial "get_all_versions" .) }}
+{{- $all := (partial "get_all_versions" (dict "suppressHidden" false)) }}
 {{- range $v := $all }}  
 {{- $dl := partial "download" (dict "detail" $v)}} 
 {{- $manual := cond $v.HasBreakingChanges "manual" "" -}}
