@@ -52,9 +52,15 @@
   {{ end }}
 {{ end }}
 
-{{ return (dict 
+{{ $hidden := false }}
+{{ if eq $page.Params.Hidden true }}
+    {{ $hidden = true }}
+{{ end }}
+
+{{ return (dict
     "Version" $version
     "Draft" $page.Draft
+    "Hidden" $hidden
     "Items" $processed
     "Date" $page.Date
     "Title" $page.Title

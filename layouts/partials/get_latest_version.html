@@ -8,6 +8,9 @@
     {{ end }}
 
     {{ $detail = (partial "get_version" $page) }}
+    {{ if $detail.Hidden }}
+        {{ continue }}
+    {{ end }}
     {{ break }}
 {{ end }}
 
