@@ -1,5 +1,10 @@
 {{/* Return a list of all versions and sub-items */}}
 
+{{ $suppressHidden := true }}
+{{ if isset . "suppressHidden" }}
+    {{ $suppressHidden = .suppressHidden }}
+{{ end }}
+
 {{ $versions := slice }}
 {{ range $page := site.Pages.ByDate.Reverse }}
     {{ $base := $page.File.Dir }}
@@ -10,6 +15,9 @@
     {{ end }}
 
     {{ $version := (partial "get_version" $page) }}
+    {{ if and $suppressHidden $version.Hidden }}
+        {{ continue }}
+    {{ end }}
     {{ $versions = $versions | append $version }}
 {{ end }}
 
