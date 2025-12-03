@@ -1,0 +1,12 @@
+type,tags,title,weight,detail,item#
+feature,"afe,balloting","Execute Electronic Balloting - Now Available!
+Execute Electronic Balloting is a powerful new module that seamlessly extends Execute AFE, transforming the way operators collaborate with partners.
+With a single Send click, ballots are securely delivered to partners - whether they use Execute or not - eliminating manual email chains and PDF chaos.
+Track delivery and partner status in real-time. Responses flow directly back into Execute, automatically updating ballot positions and saving hours of administrative effort on every AFE.
+Faster workflows. Better visibility. Less busywork.",,,
+bug,"workflow,ui,system","Approval and review paths now default to the 'Always' view rule, saving an annoying and unnecessary step when implementing them.",,,351887
+enhancement,"system,ui","On sign-in, Execute now automatically updates your user timezone to match your current browser timezone.  Previously, it would prompt you when the browser timezone differed from the user timezone.",,,353437
+enhancement,"plugins,integration,system","Document syncs now include the plugin source file name as the save comment, making it easier to identify the origin of changes. Instead of writing the filename in the comment text, it is stored in the designated source field for clearer tracking.",,,351021
+bug,"ui,system",Increased the maximum number of primary document types that could be shown in the header (before being turned into an annoying dropdown) from 7 (I'm sure it made sense at the time) to 10.,,,352475
+bug,"workflow,ui",Fixed an issue where slashes in text sections and separators within the workflow task popup broke our user interface.,,,353990
+bug,"afe,reporting,workflow","When AFE is automatically reviewed, there is no review user associated with the Auto Release review position.  This empty user caused an error when reporting on the ""Reviewed by me"" field.",,,353139
