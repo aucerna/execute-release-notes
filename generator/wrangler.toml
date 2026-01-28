@@ -1,0 +1,19 @@
+name = "release-note-generator"
+main = "worker.js"
+compatibility_date = "2024-01-15"
+
+# Non-secret configuration variables
+[vars]
+GITHUB_REPO = "aucerna/afe-navigator"
+DEVOPS_SAVED_QUERY_ID = "f6d10a61-5543-494f-9b75-a45750d8aad9"
+DEVOPS_ORG = "Aucerna"
+DEVOPS_PROJECT = "Aucerna"
+
+ [[routes]]
+ pattern = "release-notes-generator.deliveryraptor.net"
+ custom_domain = true
+
+# For production, use wrangler secret commands:
+# wrangler secret put DEVOPS_PAT
+# wrangler secret put GITHUB_TOKEN  
+# wrangler secret put OPENAI_API_KEY
