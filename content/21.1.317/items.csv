@@ -1,0 +1,27 @@
+type,tags,title,weight,detail,item#
+bug,"security,integration,system",Improvements to error message reporting when the Integration Agent encounters a TLS certificate error.,,,353967
+bug,"afe,reporting,budget",The AFE Project Allocation Report now correctly allocates actuals and field costs in systems where an account-level filter is not in use.,,,351841
+bug,"workflow,system",Fixed an issue where the Auto-release process was not updating the 'Next Reviewing Position' and 'Next Approving Position' fields.,,,355395
+bug,"ui,system",Fixed a critical issue where selecting blocks in Blockly was not working in the latest versions of Chrome and Edge.,,,356620
+bug,"reporting,ui",Fixed an issue where the browse reports screen incorrectly showed a calculated field edit icon next to every field.,,,355095
+enhancement,"integration,security,api","SharePoint authentication has been updated to use certificate-based authentication instead of username and password, aligning with modern SharePoint security standards.  ",,,356724
+bug,"reporting,attachments,system",Fixed an issue where very long field names could break the Excel sheets downloaded from the browse screen.,,,353469
+bug,"ui,system","Fixed an issue where Custom Tab Text Sections did not support multiple line input, allowing users to now enter and display text across several lines as intended.",,,295772
+feature,"integration,workflow,system","Introducing Databricks Data Selectors & Sync (Beta), a new feature that allows users to easily select and synchronize data with a Databricks environment (via. the Databricks API). This is beta functionality and not yet suitable for production use.",,,356515
+bug,"ui,system","If you set your preferred date format to  'mmm dd yyyy' (a reasonable choice), you can now actually enter dates in that format like you'd expect.",,,349499
+bug,"email,ui","Fixed an issue where emails appeared distorted or improperly formatted when viewed in Gmail Web, ensuring a cleaner and more consistent email display for users.",,,353687
+bug,"ui,system","Error messages now display correctly without incorrect HTML escaping, making it easier to understand issues when they occur.",,,353996
+bug,"integration,system","Fixed errors occurring when copying data from PostgreSQL to MSSQL using the database tool, ensuring smoother and more reliable data transfers between these systems.",,,355211
+bug,"ui,reporting,opsched","The Job Report dropdown in the Schedule Editor now only displays Global reports, making it easier to find the right report without clutter from other report types.",,,306212
+enhancement,"system,performance","The BallotUpload process now properly cleans up its temporary files after streaming rendered forms, helping keep the system tidy and preventing unnecessary file buildup.",,,296318
+enhancement,"ui,system,security,admin",The custom business rule configuration interface has been migrated from Angular to jQuery.,,,350023
+enhancement,"ui,system,security",The Comments view has been migrated from Angular to jQuery.,,,350025
+enhancement,"admin,ui,system,security",The Document Types management tool has been migrated from Angular to jQuery.,,,350017
+enhancement,"ui,system,security,admin",The reminder time selection interface has been migrated from Angular to jQuery.,,,350024
+enhancement,"security,system,ui",Updated DataTables JavaScript from version 1.9.4 to 1.13 to address security concerns and improve compatibility.,,,352852
+bug,"workflow,ui","The response date for a partner now correctly clears when the status is removed, ensuring your data stays accurate and up to date without any extra clicks.",,,354221
+bug,"workflow,ui",Fixed an issue where slashes in text sections and separators within the workflow task modal would hide the text or separator.,,,353990
+enhancement,"security,performance,ui","The marked.js library has been updated to the latest stable v12.x, bringing improved security, better performance, and new features to Markdown rendering across the application. This update affects areas like the MOTD banner, help text, and help page viewer, ensuring a smoother and safer user experience when viewing Markdown content.",,,354511
+bug,"workflow,reporting,performance","We've resolved a performance issue affecting workflow reporting, so generating your reports should now be faster and smoother, even when handling large data sets.",,,355718
+bug,"workflow,ui,security",Workflow tasks now correctly disable fields when you don't have edit rights.,,,354592
+bug,"workflow,email,system",Workflow task reminders now correctly send notifications even when the underlying workflow definition was deleted.,,,355065
