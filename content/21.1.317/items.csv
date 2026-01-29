@@ -7,7 +7,7 @@ bug,"reporting,ui",Fixed an issue where the browse reports screen incorrectly sh
 enhancement,"integration,security,api","SharePoint authentication has been updated to use certificate-based authentication instead of username and password, aligning with modern SharePoint security standards.  ",,,356724
 bug,"reporting,attachments,system",Fixed an issue where very long field names could break the Excel sheets downloaded from the browse screen.,,,353469
 bug,"ui,system","Fixed an issue where Custom Tab Text Sections did not support multiple line input, allowing users to now enter and display text across several lines as intended.",,,295772
-feature,"integration,workflow,system","Introducing Databricks Data Selectors & Sync (Beta), a new feature that allows users to easily select and synchronize data with a Databricks environment (via. the Databricks API). This is beta functionality and not yet suitable for production use.",,,356515
+feature,"integration,workflow,system","Introducing Databricks Data Selectors & Sync (Beta), a new feature that allows users to easily select and synchronize data with a Databricks environment (via the Databricks API). This is beta functionality and not yet suitable for production use.",,,356515
 bug,"ui,system","If you set your preferred date format to  'mmm dd yyyy' (a reasonable choice), you can now actually enter dates in that format like you'd expect.",,,349499
 bug,"email,ui","Fixed an issue where emails appeared distorted or improperly formatted when viewed in Gmail Web, ensuring a cleaner and more consistent email display for users.",,,353687
 bug,"ui,system","Error messages now display correctly without incorrect HTML escaping, making it easier to understand issues when they occur.",,,353996
