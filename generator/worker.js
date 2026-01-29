@@ -1087,10 +1087,15 @@ Respond in JSON format:
         
         const result = JSON.parse(cleanedResponse);
         console.log('OpenAI result:', result);
+        // Normalize tags: handle both array and semicolon/comma-separated string formats
+        let tags = result.tags || item.tags || ['system'];
+        if (typeof tags === 'string') {
+          tags = tags.split(/[;,]/).map(t => t.trim()).filter(t => t);
+        }
         return {
           title: result.title || item.title,
           type: result.type || item.type,
-          tags: result.tags || item.tags || ['system']
+          tags: tags
         };
       } catch (parseError) {
         console.warn('Failed to parse OpenAI JSON response:', responseText);
