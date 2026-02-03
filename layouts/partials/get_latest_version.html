@@ -8,7 +8,7 @@
     {{ end }}
 
     {{ $detail = (partial "get_version" $page) }}
-    {{ if $detail.Hidden }}
+    {{ if or $detail.Hidden $detail.Broken }}
         {{ continue }}
     {{ end }}
     {{ break }}
