@@ -4,3 +4,4 @@ bug,"ui,balloting","Fixed an issue where the Send to Partners modal had a very n
 bug,"api,system","Fixed date parsing error when setting the Out of Office period when the date format on the server is set to display days first.",,,355591
 enhancement,"ui,balloting","In the Quorum balloting server, once a partner submits an ""Approved"" response, they can no longer clear it. If the approval was submitted by mistake, the partner must contact the ballot operator to have the ballot resent and their response cleared.",,,356538
 bug,"workflow,ui","Fixed the searching and sorting in the tasks grid of a workflow definition.",,,357326
+bug,"system,ui","Reverted the data tables library change from version 21.1.317.",,,
