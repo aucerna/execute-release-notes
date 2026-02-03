@@ -1,6 +1,7 @@
 {{- $all := (partial "get_all_versions" (dict "suppressHidden" false)) }}
-{{- range $v := $all }}  
-{{- $dl := partial "download" (dict "detail" $v)}} 
+{{- range $v := $all }}
+{{- if $v.Broken }}{{ continue }}{{ end }}
+{{- $dl := partial "download" (dict "detail" $v)}}
 {{- $manual := cond $v.HasBreakingChanges "manual" "" -}}
 {{- printf "20%s,%s,%s\n" $v.Version $dl $manual }}
 {{- end }}
